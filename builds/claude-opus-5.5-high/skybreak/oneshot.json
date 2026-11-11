@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "game": "skybreak",
+  "model": "claude-opus-5.5-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T09:01:39Z",
+  "finishedAt": "2026-11-11T15:02:25Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 49,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Babylon.js",
+    "React",
+    "Web Audio",
+    "Vitest"
+  ],
+  "summary": "Single-player 24-seat no-build battle royale on an original island: staging pier, skiff drop and wing-sail glide, nine data-driven weapons in five rarities, eight items, full traversal, ten-phase Riftstorm, server-style bots, spectating and results, all driven by a deterministic in-browser 30Hz authoritative simulation.",
+  "selfScore": {
+    "playability": 6,
+    "polish": 5,
+    "fidelity": 5
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "No backend: the authoritative match runs in-process behind a LocalTransport, so there is no real networking, prediction or lag compensation. The screenshot is a real production-build frame captured with ?autoplay (the bot AI drives the player's seat, because headless browsers cannot use pointer lock). Not hand-tested with a mouse; real-GPU performance not measured.",
+  "purity": "one-shot",
+  "durationMinutes": 361
+}

@@ -1,0 +1,26 @@
+import { chromium } from "playwright-core";
+import { serve } from "./serve.mjs";
+const server = await serve();
+const browser = await chromium.launch({ channel: "msedge", headless: true, args: ["--ignore-gpu-blocklist", "--enable-gpu", "--use-angle=d3d11"] });
+const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+const logs = [];
+page.on("console", (m) => logs.push(`${m.type()}: ${m.text()}`));
+page.on("pageerror", (e) => logs.push(`pageerror: ${e.message}`));
+await page.goto(`http://localhost:5472/play/claude-opus-5.5-high/farestorm/?autodrive=1`);
+await page.waitForFunction(() => window.farestorm?.session, null, { timeout: 60000 });
+await page.waitForTimeout(5000);
+const r = await page.evaluate(() => {
+  const app = window.farestorm;
+  const R = app.renderer;
+  const out = [];
+  const a = R.arrow;
+  out.push(`arrow vis ${a.isVisible} enabled ${a.isEnabled()} pos ${a.position.toString()} verts ${a.getTotalVertices()} mat ${a.material?.name} inFrustum ${R.rig.cam.isInFrustum(a)}`);
+  const t = R.taxi;
+  out.push(`taxi meshes ${t.meshes.map(m => m.name + ':' + m.material?.name + ':' + m.isVisible).join(', ')}`);
+  out.push(`taxi pos ${t.root.position.toString()} session v ${app.session.v.x.toFixed(1)},${app.session.v.z.toFixed(1)}`);
+  return out;
+});
+console.log(r.join("\n"));
+console.log(logs.filter(l => !l.startsWith("log")).slice(0, 20).join("\n"));
+await browser.close();
+server.close();
