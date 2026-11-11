@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "game": "ashfall",
+  "model": "claude-opus-5.5-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T14:17:47Z",
+  "finishedAt": "2026-11-11T15:41:10Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 109,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Babylon.js",
+    "React",
+    "Web Audio API",
+    "IndexedDB",
+    "Web Workers",
+    "Vitest",
+    "Playwright (screenshots)"
+  ],
+  "summary": "An original isometric ARPG slice: two full classes, a seeded tile-built wilderness and three-floor crypt, ten enemy types with elite modifiers, two multi-phase bosses, affix loot and crafting, Echo deaths, Veteran/Target Hunt replay, and IndexedDB saves — all procedural art and audio.",
+  "selfScore": {
+    "playability": 6,
+    "polish": 5,
+    "fidelity": 7
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Balance and audio were not verified by a human or by ear; the full start-to-Engine flow is covered by simulation tests and partial headless-browser runs. Rapier/Recast/glTF were replaced by a deterministic grid sim and procedural meshes. Restarted from an empty workspace after the first attempt died on a provider error at about 28 minutes. This build is from the second, uninterrupted run.",
+  "purity": "one-shot",
+  "durationMinutes": 83
+}
