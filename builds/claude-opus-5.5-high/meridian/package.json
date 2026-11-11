@@ -1,0 +1,32 @@
+{
+  "name": "meridian-run",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Meridian Run — South Quay vertical slice: browser open-world urban action sandbox.",
+  "scripts": {
+    "dev": "vite --port 5460 --strictPort",
+    "build": "tsc --noEmit && vite build && node scripts/gen-sw.mjs",
+    "preview": "vite preview --port 5460 --strictPort",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "screenshot": "node scripts/screenshot.mjs"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "dependencies": {
+    "@babylonjs/core": "7.54.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "@types/react": "18.3.31",
+    "@types/react-dom": "18.3.7",
+    "playwright-core": "1.65.0",
+    "typescript": "5.9.3",
+    "vite": "6.4.6",
+    "vitest": "3.2.7"
+  }
+}

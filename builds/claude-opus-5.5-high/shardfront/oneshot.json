@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "game": "shardfront",
+  "model": "claude-opus-5.5-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T09:01:24Z",
+  "finishedAt": "2026-11-11T15:17:34Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 52,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Three.js",
+    "React",
+    "Vitest",
+    "Web Audio API",
+    "IndexedDB"
+  ],
+  "summary": "A 1v1 browser RTS slice on an original map: two complete asymmetric factions, a two-resource economy, fog of war, abilities, a fog-respecting Easy/Normal/Hard AI, a guided tutorial, post-game stats, and hash-verified replays on a deterministic 20 Hz simulation.",
+  "selfScore": {
+    "playability": 6,
+    "polish": 5,
+    "fidelity": 5
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Real-GPU performance and the 220-unit/60 FPS benchmark were not verified; only headless software WebGL was available. One skipped test is an opt-in map-PNG debug tool. Arrow keys pan (A/S are commands). Tools: tools/screenshot.mjs, tools/playtest.mjs, ?benchmark=1. Harness nudge: the Claude Code turn ended while waiting on a background test command, before the report was written. One neutral 'continue where you left off' notice was sent, with no feedback on the game.",
+  "purity": "one-shot",
+  "durationMinutes": 376
+}
