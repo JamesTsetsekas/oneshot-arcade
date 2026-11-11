@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "game": "farestorm",
+  "model": "claude-sonnet-5.5-high",
+  "status": "complete",
+  "harnessVersion": "v1.1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T15:42:43Z",
+  "finishedAt": "2026-11-11T16:40:00Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 61,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Three.js",
+    "Vitest",
+    "Web Audio API"
+  ],
+  "summary": "A playable Farestorm vertical slice: drive one of three storm cabs around the procedural coastal city of Galeport, pick up and deliver passengers against a shift clock, chain drifts/near-misses/shortcuts into Pulse tips, and finish with a ranked results screen in Arcade, Quick or Time Trial mode.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 7,
+    "fidelity": 5
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "No external assets; everything is procedural. Skill School, ghosts, leaderboard, Rapier/Babylon and key remapping are not built. Real-GPU frame rate and audio were not verified (headless software GL only). ?bot=1 and ?autostart=... are verification aids, not game features.",
+  "purity": "one-shot",
+  "durationMinutes": 57
+}
