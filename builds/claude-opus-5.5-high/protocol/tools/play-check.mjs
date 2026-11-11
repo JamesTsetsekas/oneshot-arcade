@@ -1,0 +1,71 @@
+// Drives the production build with real keyboard/mouse events (no autopilot):
+// deploy, move with WASD, open the buy menu with B and buy with number keys,
+// fire with the mouse. Prints what the authoritative room observed.
+import { chromium } from 'playwright-core';
+import { serve } from './serve.mjs';
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const srv = await serve();
+const b = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true, args: ['--ignore-gpu-blocklist', '--enable-gpu', '--use-angle=d3d11'] });
+const p = await b.newPage({ viewport: { width: 1280, height: 720 } });
+const errs = [];
+p.on('pageerror', (e) => errs.push(e.message));
+p.on('console', (m) => { if (m.type() === 'error') errs.push(m.text().slice(0, 300)); });
+await p.goto('http://localhost:5432/play/claude-opus-5.5-high/protocol/?harness=1');
+await sleep(2500);
+await p.getByText('Play', { exact: true }).click();
+await sleep(300);
+await p.getByText('Quick match').click();
+await p.waitForSelector('text=Click to deploy', { timeout: 30000 });
+const box = await p.evaluate(() => { const el = [...document.querySelectorAll('button')].find((x) => x.textContent === 'Click to deploy'); const r = el.getBoundingClientRect(); return { x: r.x + r.width / 2, y: r.y + r.height / 2 }; });
+await p.mouse.click(box.x, box.y);
+await sleep(600);
+const st = () => p.evaluate(() => { const s = window.__lpdbg; return s; });
+void st;
+const locked = await p.evaluate(() => document.pointerLockElement !== null);
+console.log('pointer locked after deploy click:', locked);
+const pos0 = await p.evaluate(() => document.querySelector('.hud-loc')?.textContent);
+console.log('location HUD:', pos0);
+// buy: B, 5 (gear), 1 (vest)
+await p.keyboard.press('KeyB');
+await sleep(400);
+const buyOpen = await p.evaluate(() => !!document.querySelector('.overlay.buy'));
+console.log('buy menu open:', buyOpen);
+await p.keyboard.press('Digit5');
+await sleep(150);
+await p.keyboard.press('Digit1');
+await sleep(400);
+const money = await p.evaluate(() => document.querySelector('.buy-head .money')?.textContent);
+console.log('money after buying a vest:', money);
+await p.keyboard.press('Escape');
+await sleep(400);
+console.log('buy menu closed:', !(await p.evaluate(() => !!document.querySelector('.overlay.buy'))));
+const armor = await p.evaluate(() => document.querySelector('.hud-vitals .ar')?.textContent);
+console.log('armor HUD:', armor);
+const me = () => p.evaluate(() => { const s = window.__lp; const q = s.room.players[s.humanId]; return { x: q.pos.x, z: q.pos.z, yaw: q.yaw, mag: q.secondary?.mag, phase: s.room.phase, locked: !!document.pointerLockElement, active: q.active }; });
+console.log('after closing buy menu:', await me());
+// re-lock if the browser refused keyboard-initiated lock
+if (!(await me()).locked) { await p.mouse.click(640, 360); await sleep(300); }
+while ((await me()).phase === 'buy') await sleep(500);
+const a = await me();
+await p.keyboard.down('KeyW');
+await sleep(1500);
+await p.keyboard.up('KeyW');
+const b2 = await me();
+console.log('moved with W:', Math.hypot(b2.x - a.x, b2.z - a.z).toFixed(2), 'm');
+await p.mouse.move(640, 360);
+await p.mouse.move(900, 360, { steps: 5 });
+const c = await me();
+console.log('mouse turned yaw by', (c.yaw - b2.yaw).toFixed(3), 'rad');
+await p.mouse.down();
+await sleep(80);
+await p.mouse.up();
+await sleep(300);
+const d = await me();
+console.log('fired: mag', c.mag, '->', d.mag);
+await p.keyboard.press('Digit3');
+await sleep(200);
+console.log('slot after pressing 3:', (await me()).active);
+await p.screenshot({ path: 'oneshot/play-check.png' });
+console.log('errors:', errs.length ? errs : 'none');
+await b.close();
+srv.close();

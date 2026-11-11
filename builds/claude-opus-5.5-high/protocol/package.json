@@ -1,0 +1,29 @@
+{
+  "name": "last-protocol",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Last Protocol - browser 5v5 tactical shooter vertical slice (Cipher Breach on Aperture Annex)",
+  "scripts": {
+    "dev": "vite --port 5430 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 5431 --strictPort",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "screenshot": "node tools/screenshot.mjs"
+  },
+  "dependencies": {
+    "@babylonjs/core": "8.56.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@vitejs/plugin-react": "4.7.0",
+    "playwright-core": "1.56.1",
+    "typescript": "5.9.3",
+    "vite": "6.4.6",
+    "vitest": "3.2.7"
+  }
+}

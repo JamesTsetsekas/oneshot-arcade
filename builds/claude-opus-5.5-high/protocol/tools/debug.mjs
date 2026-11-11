@@ -1,0 +1,13 @@
+import { chromium } from 'playwright-core';
+import { serve } from './serve.mjs';
+const srv = await serve();
+const b = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true, args: ['--ignore-gpu-blocklist','--enable-gpu','--use-angle=d3d11'] });
+const p = await b.newPage({ viewport: { width: 1280, height: 720 } });
+p.on('response', (r) => { if (r.status() >= 400) console.log('HTTP', r.status(), r.url()); });
+p.on('pageerror', (e) => console.log('PAGEERROR', e.stack));
+p.on('console', (m) => { if (m.type() === 'error' || m.type() === 'warning') console.log('CONSOLE', m.type(), m.text().slice(0, 400)); });
+await p.goto('http://localhost:5432/play/claude-opus-5.5-high/protocol/' + (process.argv[2] ?? '?harness=1&autostart=quick&autopilot=1'));
+await new Promise((r) => setTimeout(r, Number(process.argv[3] ?? 12000)));
+console.log(await p.evaluate(() => document.querySelector('.errorbox')?.textContent ?? 'no error box'));
+await p.screenshot({ path: process.argv[4] ?? 'C:/Users/jtset/AppData/Local/Temp/claude/c5c35db6b91e88b7/2192c394-9358-44ec-84ce-e5fd547e2f51/scratchpad/dbg.png' });
+await b.close(); srv.close();
