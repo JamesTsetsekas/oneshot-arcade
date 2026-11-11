@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "game": "shardfront",
+  "model": "claude-sonnet-5.5-high",
+  "status": "complete",
+  "harnessVersion": "v1.1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T17:16:26Z",
+  "finishedAt": "2026-11-11T19:06:09Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 35,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Three.js (WebGL 2)",
+    "Vitest",
+    "Web Audio API"
+  ],
+  "summary": "A playable 1v1 RTS slice on a hand-built symmetric map: two asymmetric factions, economy/supply/tech/fog of war, a fog-obeying utility AI with three levels, tutorial, replays with hash verification and post-game stats.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 6,
+    "fidelity": 6
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Procedural assets only. HUD is vanilla DOM (not React); navigation runs on the main thread (no workers); WebGPU path, occlusion fade, LODs and online play are not implemented. Performance on a real GPU is unverified (only software-rendered headless Edge was available). Restarted from an empty workspace after the first attempt died on a provider error. This build is from the second, uninterrupted run.",
+  "purity": "one-shot",
+  "durationMinutes": 110
+}

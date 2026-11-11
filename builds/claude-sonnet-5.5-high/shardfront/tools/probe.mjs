@@ -1,0 +1,30 @@
+// ad-hoc browser probe: node tools/probe.mjs <name> "<js to run in page with game=__app.game>" [wait ms]
+import { chromium } from 'playwright-core';
+import path from 'node:path';
+import fs from 'node:fs';
+import { serve } from './serve.mjs';
+const root = path.resolve('.');
+const prefix = '/play/claude-sonnet-5.5-high/shardfront/';
+const server = await serve(path.join(root, 'dist'), prefix, 5502);
+const browser = await chromium.launch({ channel: process.env.BROWSER_CHANNEL || 'msedge', headless: true, args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
+const page = await browser.newPage({ viewport: { width: 1600, height: 900 } });
+const logs = [];
+page.on('console', (m) => { if (['error', 'warning'].includes(m.type())) logs.push(m.type() + ': ' + m.text()); });
+page.on('pageerror', (e) => logs.push('pageerror: ' + e.message));
+await page.goto(`http://127.0.0.1:5502${prefix}`);
+await page.waitForSelector('.menu');
+const mode = process.env.MODE || 'play';
+await page.click(`[data-a=${mode}]`);
+await page.waitForSelector('[data-a=start]');
+await page.click('[data-a=start]');
+await page.waitForSelector('#hud', { timeout: 60000 });
+const name = process.argv[2] || 'probe';
+const script = process.argv[3] || '';
+const wait = parseInt(process.argv[4] || '1500', 10);
+if (script) { const r = await page.evaluate(`(async()=>{ const app=window.__app; const game=app.game; const sim=game.sim; ${script} })()`); if (r !== undefined) console.log(JSON.stringify(r)); }
+await page.waitForTimeout(wait);
+fs.mkdirSync('oneshot', { recursive: true });
+await page.screenshot({ path: path.join('oneshot', name + '.png') });
+console.log(logs.slice(0, 20).join('\n') || 'no console errors');
+await browser.close();
+server.close();

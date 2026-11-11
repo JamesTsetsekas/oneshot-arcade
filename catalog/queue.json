@@ -3,12 +3,6 @@
   "runs": [
     {
       "model": "claude-sonnet-5.5-high",
-      "game": "shardfront",
-      "status": "running",
-      "started": "2026-11-11"
-    },
-    {
-      "model": "claude-sonnet-5.5-high",
       "game": "crownfall",
       "status": "running",
       "started": "2026-11-11"

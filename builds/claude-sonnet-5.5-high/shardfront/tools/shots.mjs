@@ -1,0 +1,33 @@
+// Headless gameplay screenshots from the production build (Edge/Chrome via playwright-core).
+import { chromium } from 'playwright-core';
+import path from 'node:path';
+import fs from 'node:fs';
+import { serve } from './serve.mjs';
+
+const root = path.resolve('.');
+const dist = path.join(root, 'dist');
+const out = path.join(root, 'oneshot');
+fs.mkdirSync(out, { recursive: true });
+const prefix = '/play/claude-sonnet-5.5-high/shardfront/';
+const server = await serve(dist, prefix, 5501);
+const channel = process.env.BROWSER_CHANNEL || 'msedge';
+const browser = await chromium.launch({ channel, headless: true, args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--enable-webgl'] });
+const page = await browser.newPage({ viewport: { width: 1600, height: 900 } });
+const logs = [];
+page.on('console', (m) => { if (['error', 'warning'].includes(m.type())) logs.push(m.type() + ': ' + m.text()); });
+page.on('pageerror', (e) => logs.push('pageerror: ' + e.message));
+const url = `http://127.0.0.1:5501${prefix}`;
+await page.goto(url);
+await page.waitForSelector('.menu', { timeout: 20000 });
+await page.screenshot({ path: path.join(out, 'menu.png') });
+const mode = process.argv[2] || 'skirmish';
+await page.click('[data-a=play]');
+await page.waitForSelector('[data-a=start]');
+await page.screenshot({ path: path.join(out, 'prematch.png') });
+await page.click('[data-a=start]');
+await page.waitForSelector('#hud', { timeout: 60000 });
+await page.waitForTimeout(2500);
+await page.screenshot({ path: path.join(out, 'game-start.png') });
+console.log(logs.join('\n') || 'no console errors');
+await browser.close();
+server.close();

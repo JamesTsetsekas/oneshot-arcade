@@ -1,0 +1,28 @@
+{
+  "name": "shardfront",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Shardfront - a browser RTS vertical slice",
+  "scripts": {
+    "dev": "vite --port 5500 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 5500 --strictPort",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "shots": "node tools/shots.mjs"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.170.0",
+    "playwright-core": "^1.49.1",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.3",
+    "vitest": "^2.1.8"
+  }
+}

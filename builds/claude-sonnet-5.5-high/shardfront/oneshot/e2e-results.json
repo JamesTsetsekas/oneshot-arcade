@@ -1,0 +1,80 @@
+{
+  "results": [
+    {
+      "name": "box-select selects workers",
+      "ok": true,
+      "extra": "selected 6"
+    },
+    {
+      "name": "B opens build palette",
+      "ok": true,
+      "extra": ""
+    },
+    {
+      "name": "palette key enters placement mode",
+      "ok": true,
+      "extra": ""
+    },
+    {
+      "name": "placing a pylon issues a build order",
+      "ok": true,
+      "extra": "build orders 1"
+    },
+    {
+      "name": "pylon construction started",
+      "ok": true,
+      "extra": "pylons 1"
+    },
+    {
+      "name": "pylon completes (supply cap raised)",
+      "ok": true,
+      "extra": "done 1, cap 18"
+    },
+    {
+      "name": "hotkey Q trains a Fabricator",
+      "ok": true,
+      "extra": "queue 1"
+    },
+    {
+      "name": "assembly bay built",
+      "ok": true,
+      "extra": "bays 1/1 ore 325"
+    },
+    {
+      "name": "trained Bulwarks from Assembly Bay",
+      "ok": true,
+      "extra": "bulwarks 2"
+    },
+    {
+      "name": "Ctrl+1 assigns a control group",
+      "ok": true,
+      "extra": "group size 2"
+    },
+    {
+      "name": "pressing 1 re-selects the group",
+      "ok": true,
+      "extra": ""
+    },
+    {
+      "name": "A enters attack-move mode",
+      "ok": true,
+      "extra": ""
+    },
+    {
+      "name": "attack-move order issued",
+      "ok": true,
+      "extra": "order kind 1"
+    },
+    {
+      "name": "right-click issues move",
+      "ok": true,
+      "extra": ""
+    },
+    {
+      "name": "S stops",
+      "ok": true,
+      "extra": ""
+    }
+  ],
+  "logs": []
+}
