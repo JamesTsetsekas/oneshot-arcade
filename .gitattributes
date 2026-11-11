@@ -8,3 +8,8 @@
 *.mp3 binary
 *.ogg binary
 *.wasm binary
+*.webm binary
+*.mp4 binary
+*.gif binary
+*.glb binary
+*.ktx2 binary

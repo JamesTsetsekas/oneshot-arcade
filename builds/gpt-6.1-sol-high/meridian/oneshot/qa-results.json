@@ -1,0 +1,14 @@
+{
+  "viewport": "1280x720",
+  "path": "/arcade/meridian/",
+  "errors": [],
+  "checks": [
+    "new shift shows gameplay HUD",
+    "keyboard throttle changes speed",
+    "city map opens and closes",
+    "braking and dismount work",
+    "safe checkpoint save action",
+    "reload and Continue restore gameplay",
+    "offline reload loads cached game and save"
+  ]
+}

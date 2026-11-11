@@ -1,0 +1,1 @@
+{"name":"farestorm","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"vite --host 127.0.0.1 --port 5270","build":"tsc --noEmit && vite build","test":"tsx --test tests/*.test.ts"},"dependencies":{"@babylonjs/core":"^8.0.0"},"devDependencies":{"vite":"^6.0.0","typescript":"^5.7.0","tsx":"^4.19.0","@playwright/test":"^1.51.0"}}

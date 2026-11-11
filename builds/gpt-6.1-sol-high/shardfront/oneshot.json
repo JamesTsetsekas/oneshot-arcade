@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "game": "shardfront",
+  "model": "gpt-6.1-sol-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T05:48:44.3476580Z",
+  "finishedAt": "2026-11-11T06:19:23.705Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Three.js",
+    "React",
+    "Vitest",
+    "Playwright"
+  ],
+  "summary": "A local 3D RTS skirmish: harvest, build, train combined arms, cross Glass Ravine, and destroy the enemy relay.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 6,
+    "fidelity": 5
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Reduced rosters and local AI; no networking, replay playback or full scripted tutorial. See report for verification and limitations.",
+  "purity": "one-shot",
+  "durationMinutes": 31
+}

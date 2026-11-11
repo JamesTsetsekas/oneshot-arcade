@@ -1,0 +1,4 @@
+﻿import http from 'node:http';import fs from 'node:fs';import path from 'node:path';
+const root=path.resolve('dist');const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.wasm':'application/wasm','.json':'application/json','.png':'image/png','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
+http.createServer((req,res)=>{const p=decodeURIComponent((req.url||'').split('?')[0]);if(!p.startsWith('/arcade/meridian/')){res.writeHead(404);res.end();return;}const name=p.slice('/arcade/meridian/'.length)||'index.html';const target=path.resolve(root,name);if(!target.startsWith(root+path.sep)&&target!==root){res.writeHead(403);res.end();return;}fs.readFile(target,(e,data)=>{if(e){res.writeHead(404);res.end();return;}res.setHeader('Content-Type',types[path.extname(target)]||'application/octet-stream');res.end(data);});}).listen(5260,'127.0.0.1',()=>console.log('Production: http://127.0.0.1:5260/arcade/meridian/'));
+

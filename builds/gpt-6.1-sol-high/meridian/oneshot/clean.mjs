@@ -1,0 +1,2 @@
+﻿import fs from 'node:fs';import path from 'node:path';
+const root=process.cwd();if(path.basename(root)!=='meridian'||!root.includes('oneshot-runs'))throw Error('Unexpected workspace');for(const name of ['node_modules','dist']){const target=path.resolve(root,name);if(path.dirname(target)!==root)throw Error('Unsafe target');console.log('Removing generated directory: '+target);fs.rmSync(target,{recursive:true,force:true});}

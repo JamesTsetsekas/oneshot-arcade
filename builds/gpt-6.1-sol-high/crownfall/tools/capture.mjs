@@ -1,0 +1,27 @@
+import {chromium} from '@playwright/test';
+import fs from 'node:fs';
+fs.mkdirSync('oneshot',{recursive:true});
+const browser=await chromium.launch({headless:true,args:['--enable-unsafe-swiftshader','--use-angle=swiftshader']});
+const page=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1});
+const errors=[];page.on('pageerror',e=>errors.push(String(e)));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+await page.goto('http://127.0.0.1:5240/play/crownfall/',{waitUntil:'networkidle'});
+await page.screenshot({path:'oneshot/draft.png'});
+await page.getByRole('button',{name:'Enter the Diadem'}).click();
+await page.waitForTimeout(2500);
+if(await page.locator('.fatal').count())throw new Error(await page.locator('.fatal').innerText());
+await page.keyboard.press('p');await page.getByRole('button',{name:/Sunspoke Bow/}).click();await page.locator('.shop-modal .close').click();
+const minimap=page.locator('.minimap canvas');const r=await minimap.boundingBox();
+// Click the upper lane near the centre using the public minimap control.
+await page.mouse.click(r.x+r.width*.44,r.y+r.height*.19);
+await page.waitForTimeout(8500);
+await page.mouse.move(810,290);await page.keyboard.press('q');await page.keyboard.press('4');
+await page.waitForTimeout(5500);
+await page.screenshot({path:'oneshot/screenshot.png'});
+await page.keyboard.down('Tab');await page.screenshot({path:'oneshot/scoreboard.png'});await page.keyboard.up('Tab');
+await page.keyboard.press('Escape');const paused=await page.getByText('A moment to strategize.').count();await page.getByRole('button',{name:'Return to battle'}).click();
+await page.mouse.click(r.x+r.width*.09,r.y+r.height*.5);await page.waitForTimeout(15000);
+await page.keyboard.press('b');await page.waitForTimeout(8000);await page.keyboard.press('p');
+await page.screenshot({path:'oneshot/shop.png'});
+const stats={url:page.url(),viewport:{width:1440,height:900},errors,shopVerified:await page.getByText('You are in shop range.',{exact:false}).count()>0,pauseVerified:paused>0,inventoryVerified:await page.locator('.item-slots span[title="Sunspoke Bow"]').count()>0,clock:await page.locator('.score strong').innerText()};
+fs.writeFileSync('oneshot/browser-check.json',JSON.stringify(stats,null,2));console.log(JSON.stringify(stats));
+await browser.close();if(errors.length)process.exitCode=1;

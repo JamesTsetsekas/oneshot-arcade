@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "game": "crownfall",
+  "model": "gpt-6.1-sol-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T05:49:17.7481953Z",
+  "finishedAt": "2026-11-11T06:24:49.891Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 20,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Three.js",
+    "React",
+    "Vite"
+  ],
+  "summary": "An offline 3v3 sky-island siege with six selectable hero profiles, two wave lanes, a fountain shop, a neutral siege boss, and gated Crown Engine victory.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 7,
+    "fidelity": 4
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Reduced offline vertical slice, not the production multiplayer MVP. Hero kits, bots, navigation and shop are simplified. No network services or external assets.",
+  "purity": "one-shot",
+  "durationMinutes": 36
+}

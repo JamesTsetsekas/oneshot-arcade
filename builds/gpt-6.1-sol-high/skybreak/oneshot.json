@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "game": "skybreak",
+  "model": "gpt-6.1-sol-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T05:49:12.6908665Z",
+  "finishedAt": "2026-11-11T06:39:18.789Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 25,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Babylon.js",
+    "React",
+    "Vite",
+    "Web Audio"
+  ],
+  "summary": "Drop into an original floating salvage island, fight 23 local bots, loot resonance caches, and outlast the closing Riftstorm.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 6,
+    "fidelity": 4
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Complete offline local-bot core loop. 10 production browser checks passed at a nested URL. Target hardware performance and online multiplayer are unverified; see report for reduced scope and clean-install details.",
+  "purity": "one-shot",
+  "durationMinutes": 50
+}

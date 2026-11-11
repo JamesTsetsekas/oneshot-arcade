@@ -1,0 +1,41 @@
+import {chromium} from '@playwright/test';
+import {mkdir,writeFile} from 'node:fs/promises';
+const browser=await chromium.launch({headless:true,executablePath:process.env.FARESTORM_CHROME,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:1280,height:720}});
+page.setDefaultTimeout(120000);page.setDefaultNavigationTimeout(120000);
+const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
+await page.goto('http://127.0.0.1:5270/arcade/farestorm/',{waitUntil:'networkidle'});
+await page.waitForTimeout(2000);await mkdir('oneshot',{recursive:true});
+await page.screenshot({path:'oneshot/menu.png'});
+await page.getByRole('button',{name:'START YOUR SHIFT'}).click();
+await page.keyboard.down('w');await page.waitForFunction(()=>JSON.parse(document.querySelector('#game').dataset.state||'{}').elapsed>1.4,null,{timeout:60000});await page.keyboard.up('w');await page.keyboard.down('s');await page.waitForFunction(()=>JSON.parse(document.querySelector('#game').dataset.state||'{}').elapsed>2.15,null,{timeout:60000});await page.keyboard.up('s');
+await page.waitForTimeout(600);await page.screenshot({path:'oneshot/screenshot.png'});
+const objective=await page.locator('#objective-kicker').textContent();
+await page.keyboard.press('Escape');const pausedClock=await page.locator('#clock').textContent();await page.waitForTimeout(1100);const pauseWorks=pausedClock===await page.locator('#clock').textContent();await page.getByRole('button',{name:'BACK TO THE STREETS'}).click();
+await page.evaluate(()=>{
+ const held=new Set();
+ const key=(code,on)=>{if(on&&!held.has(code)){held.add(code);dispatchEvent(new KeyboardEvent('keydown',{code}));}if(!on&&held.has(code)){held.delete(code);dispatchEvent(new KeyboardEvent('keyup',{code}));}};
+ window.driveBot=setInterval(()=>{
+  const raw=document.querySelector('#game').dataset.state;if(!raw)return;const s=JSON.parse(raw);
+  if(s.deliveries>0||!document.querySelector('#clock')){for(const code of [...held])key(code,false);clearInterval(window.driveBot);return;}
+  const p=s.route[0],d=Math.hypot(p.x-s.x,p.z-s.z),td=Math.hypot(s.target.x-s.x,s.target.z-s.z);
+  const error=Math.atan2(Math.sin(Math.atan2(p.x-s.x,p.z-s.z)-s.angle),Math.cos(Math.atan2(p.x-s.x,p.z-s.z)-s.angle));
+  let speed=Math.abs(error)>1?6:Math.abs(error)>.4?10:Math.min(27,Math.max(10,d*.7));
+  if(td<25)speed=Math.min(speed,Math.max(0,(td-6)*.85));
+  key('KeyW',s.speed<speed-.3);key('KeyS',s.speed>speed+1&&s.speed>1);key('KeyA',error<-.065);key('KeyD',error>.065);
+ },60);
+});
+await page.waitForFunction(()=>JSON.parse(document.querySelector('#game').dataset.state||'{}').elapsed>8,null,{timeout:60000});
+await page.screenshot({path:'oneshot/screenshot.png'});
+await page.waitForFunction(()=>JSON.parse(document.querySelector('#game').dataset.state||'{}').deliveries>0||document.querySelector('.results'),null,{timeout:180000});
+const state=await page.locator('#game').getAttribute('data-state');
+await page.screenshot({path:'oneshot/delivery-or-end.png'});
+await page.waitForSelector('.results',{timeout:180000});
+await page.screenshot({path:'oneshot/results.png'});
+const result=await page.locator('.results').textContent();
+await page.getByRole('button',{name:'ANOTHER SHIFT'}).click();
+await page.waitForSelector('#clock');const retryWorks=await page.locator('#score').textContent()==='$0';
+console.log(JSON.stringify({errors,objective,pauseWorks,retryWorks,state:JSON.parse(state),result,title:await page.title()},null,2));
+await writeFile('oneshot/browser-check.json',JSON.stringify({errors,objective,pauseWorks,retryWorks,state:JSON.parse(state),result},null,2));
+await browser.close();
+if(errors.length||!pauseWorks||!retryWorks||!objective?.includes('ON BOARD')||!JSON.parse(state).deliveries)process.exitCode=1;

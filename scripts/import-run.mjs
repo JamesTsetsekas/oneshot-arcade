@@ -68,6 +68,13 @@ if (meta.screenshot && !fs.existsSync(path.join(target, meta.screenshot))) {
   delete meta.screenshot;
 }
 fs.writeFileSync(metaFile, JSON.stringify(meta, null, 2) + "\n");
+const queueFile = path.join(root, "catalog", "queue.json");
+if (fs.existsSync(queueFile)) {
+  const queue = JSON.parse(fs.readFileSync(queueFile, "utf8"));
+  const before = queue.runs?.length ?? 0;
+  queue.runs = (queue.runs ?? []).filter((r) => !(r.model === modelId && r.game === gameId));
+  if (queue.runs.length !== before) fs.writeFileSync(queueFile, JSON.stringify(queue, null, 2) + "\n");
+}
 console.log(
   `Imported ${modelId}/${gameId}: status=${meta.status}, ${(bytes / 1e6).toFixed(1)} MB source, tests=${JSON.stringify(meta.tests ?? null)}`,
 );

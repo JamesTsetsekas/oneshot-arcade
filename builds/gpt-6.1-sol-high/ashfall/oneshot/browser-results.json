@@ -1,0 +1,12 @@
+{
+  "errors": [],
+  "subpath": true,
+  "creation": true,
+  "cast": true,
+  "skillAllocation": true,
+  "indexedDBRoundtrip": true,
+  "restored": {
+    "zone": 1,
+    "rank": 1
+  }
+}

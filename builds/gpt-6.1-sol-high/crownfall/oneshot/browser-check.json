@@ -1,0 +1,12 @@
+{
+  "url": "http://127.0.0.1:5240/play/crownfall/",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "errors": [],
+  "shopVerified": true,
+  "pauseVerified": true,
+  "inventoryVerified": true,
+  "clock": "00:31"
+}
