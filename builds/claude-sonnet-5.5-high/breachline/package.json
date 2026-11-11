@@ -1,0 +1,32 @@
+{
+  "name": "breachline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Breachline - original browser arcade military FPS (Practice vertical slice)",
+  "scripts": {
+    "dev": "vite --port 5520 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 5521 --strictPort",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "mapdump": "tsx tools/mapdump.ts",
+    "balance": "tsx tools/balance.ts"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^7.54.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "playwright": "^1.49.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "game": "breachline",
+  "model": "claude-sonnet-5.5-high",
+  "status": "complete",
+  "harnessVersion": "v1.1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T15:42:26Z",
+  "finishedAt": "2026-11-11T17:30:00Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 58,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Babylon.js",
+    "React",
+    "Web Audio",
+    "Vitest"
+  ],
+  "summary": "Offline 6v6 Team Clash FPS on an original mirrored island map with nine weapons, equipment, Momentum support actions, simulation-driven bots, loadouts, XP and a full match-to-results loop.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 5,
+    "fidelity": 4
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Practice only: no online multiplayer, netcode or backend. Verified in software-rendered headless Chromium only; real GPU performance and real Pointer Lock were not verified. Automation hooks live on window.__breachline.",
+  "purity": "one-shot",
+  "durationMinutes": 108
+}
