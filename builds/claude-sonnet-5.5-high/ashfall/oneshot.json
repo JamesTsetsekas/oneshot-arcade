@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "game": "ashfall",
+  "model": "claude-sonnet-5.5-high",
+  "status": "complete",
+  "harnessVersion": "v1.1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T17:16:29Z",
+  "finishedAt": "2026-11-11T18:45:45Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 60,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Three.js",
+    "Vitest",
+    "Web Audio API",
+    "IndexedDB"
+  ],
+  "summary": "A playable isometric action-RPG slice: two classes, a seeded wilderness, a three-floor crypt, two multi-phase bosses, affix loot with identify/salvage/reroll/sockets, quests, Normal/Veteran, Target Hunt and checksummed IndexedDB saves, all procedural and tested end to end.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 6,
+    "fidelity": 6
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Verified only through headless software-rendered Chrome, scripted input and bots; real-GPU frame rate, audio by ear and a hand-played full session were not verified. Stack deviates from the brief (three.js, vanilla DOM, grid collision) - see ONESHOT-REPORT.md. Dev helper URL params: ?autostart=cinder|ranger and &bench=1. Restarted from an empty workspace after the first attempt died on a provider error. This build is from the second, uninterrupted run.",
+  "purity": "one-shot",
+  "durationMinutes": 89
+}

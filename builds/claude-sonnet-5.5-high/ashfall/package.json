@@ -1,0 +1,30 @@
+{
+  "name": "ashfall-covenant",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Ashfall Covenant - an original isometric browser action RPG vertical slice",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5510 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5511 --strictPort",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "capture": "node tools/capture.mjs",
+    "bench": "node tools/bench.mjs"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "dependencies": {
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/three": "^0.187.0",
+    "playwright-core": "^1.65.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  }
+}
