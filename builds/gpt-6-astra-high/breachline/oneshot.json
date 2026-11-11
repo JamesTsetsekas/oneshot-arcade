@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "game": "breachline",
+  "model": "gpt-6-astra-high",
+  "status": "complete",
+  "purity": "iterated",
+  "harnessVersion": "pre-harness",
+  "date": "2026-09-28",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "combat-verified.png",
+  "tests": {
+    "passed": 27,
+    "failed": 0
+  },
+  "readme": "README.md",
+  "verification": "docs/VERIFICATION.md",
+  "notes": "Rebuilt after an earlier attempt. Includes an optional localhost WebSocket relay (`npm run server`)."
+}

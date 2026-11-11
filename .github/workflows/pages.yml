@@ -1,4 +1,4 @@
-name: Deploy Astra Oneshots to GitHub Pages
+name: Deploy Oneshot Arcade to GitHub Pages
 
 on:
   push:
@@ -15,16 +15,22 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22.12.0
           cache: npm
-      - name: Install and build all games
-        run: npm run setup
-      - name: Prepare static Pages site
-        run: node scripts/prepare-pages.mjs
+          cache-dependency-path: builds/*/*/package-lock.json
+      - name: Validate catalog
+        run: npm run check
+      - name: Install and build every game build
+        # --keep-going: one model's broken build must not take the whole arcade down.
+        # Failed builds still appear on the dashboard, marked "not built".
+        run: npm run setup -- --keep-going
+      - name: Assemble static arcade site
+        run: npm run site
       - name: Publish static site branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -32,8 +38,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout --orphan gh-pages
-          git rm -rf . || true
+          git rm -rf --cached . > /dev/null || true
+          find . -mindepth 1 -maxdepth 1 ! -name .git ! -name site -exec rm -rf {} +
           cp -R site/. .
+          rm -rf site
           git add -A
-          git commit -m "Deploy GitHub Pages site ${GITHUB_SHA}" || true
+          git commit -m "Deploy Oneshot Arcade ${GITHUB_SHA}" || true
           git push --force origin HEAD:gh-pages

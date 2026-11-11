@@ -1,0 +1,58 @@
+{
+  "origin": "http://127.0.0.1:5325/play/claude-fable-5.2-high/breachline/",
+  "startedAt": "2026-11-11T08:27:31.135Z",
+  "errors": [],
+  "notFound": [],
+  "shots": [
+    "menu.png",
+    "practice.png",
+    "loadouts.png",
+    "loadouts-attachments.png",
+    "gameplay-1.png",
+    "gameplay-2.png",
+    "gameplay-3.png",
+    "gameplay-4.png",
+    "gameplay-5.png",
+    "gameplay-6.png",
+    "gameplay-7.png",
+    "death-recap.png",
+    "gameplay-8.png",
+    "gameplay-9.png",
+    "gameplay-10.png",
+    "gameplay-11.png",
+    "results.png"
+  ],
+  "match": {
+    "ended": true,
+    "finalScore": [
+      20,
+      6
+    ],
+    "you": {
+      "id": 0,
+      "name": "Operator",
+      "team": 0,
+      "bot": false,
+      "kills": 13,
+      "deaths": 1,
+      "assists": 2,
+      "score": 2280,
+      "me": true
+    },
+    "prediction": {
+      "reconciles": 1,
+      "snaps": 0,
+      "maxError": 0.05301074566785751,
+      "lastError": 0,
+      "pending": 1,
+      "rttMs": 11.072432125036135
+    },
+    "samples": 43,
+    "fpsMedian": 113,
+    "fpsMin": 87,
+    "snapshotKBps": 10.1,
+    "maxPredictionErrorCm": 0,
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 2080 Ti (0x00001E04) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+  },
+  "finishedAt": "2026-11-11T08:28:29.600Z"
+}

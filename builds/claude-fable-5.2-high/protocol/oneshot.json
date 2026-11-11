@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "game": "protocol",
+  "model": "claude-fable-5.2-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T06:45:58Z",
+  "finishedAt": "2026-11-11T08:51:22Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 96,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Babylon.js",
+    "React",
+    "Web Audio API",
+    "Vitest",
+    "Playwright"
+  ],
+  "summary": "A single-player vertical slice of a 5v5 tactical shooter: full Cipher Breach matches against server-side bots on an original two-vault map, with 12 weapons, five utility items, round economy and an in-process authoritative 64 Hz simulation.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 7,
+    "fidelity": 5
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Local only: no online multiplayer, matchmaking or services. Not hand-played by a human; verified by 96 headless tests and a 20-check scripted run of the production build in headless Edge. Gameplay screenshots use attract mode (?autopilot=1), where the local seat is bot-driven. The match requests fullscreen and Pointer Lock; Esc pauses.",
+  "purity": "one-shot",
+  "durationMinutes": 125
+}

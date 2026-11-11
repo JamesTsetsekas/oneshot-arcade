@@ -1,0 +1,30 @@
+{
+  "gameplay": {
+    "phase": "live",
+    "round": 1,
+    "actors": 10,
+    "x": -4,
+    "z": -14.074999999999875,
+    "hp": 100,
+    "ammo": 15,
+    "fps": 4,
+    "ruleset": "annex-local-1",
+    "engine": 2
+  },
+  "errors": [],
+  "failed": [],
+  "controlsChecked": [
+    "deploy",
+    "buy armor",
+    "close buy",
+    "forward movement",
+    "scoreboard",
+    "fire",
+    "reload",
+    "pause",
+    "sensitivity",
+    "resume"
+  ],
+  "resolution": "1280x720",
+  "subpath": "/arcade/protocol/"
+}

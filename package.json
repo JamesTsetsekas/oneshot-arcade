@@ -1,16 +1,21 @@
 {
-  "name": "astra-oneshots",
-  "version": "1.0.0",
+  "name": "oneshot-arcade",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
-  "description": "Eight original browser-game experiments and a local collection launcher.",
+  "description": "One prompt, every model: original browser games built one-shot by different AI models, compared side by side.",
+  "repository": "https://github.com/JamesTsetsekas/oneshot-arcade",
   "engines": { "node": "^22.12.0 || >=24.0.0" },
   "scripts": {
     "setup": "node scripts/games.mjs setup",
     "install:games": "node scripts/games.mjs install",
     "build": "node scripts/games.mjs build",
     "test": "node scripts/games.mjs test",
-    "start": "node outputs/arcade/serve.mjs",
-    "verify": "node outputs/arcade/verify.mjs"
+    "check": "node scripts/check.mjs",
+    "site": "node scripts/build-site.mjs",
+    "start": "node scripts/build-site.mjs && node scripts/serve.mjs",
+    "serve": "node scripts/serve.mjs",
+    "new-run": "node scripts/new-run.mjs",
+    "import-run": "node scripts/import-run.mjs"
   }
 }

@@ -1,0 +1,13 @@
+{
+  "passed": 10,
+  "errors": [],
+  "requests": 16,
+  "metrics": {
+    "fps": 7.221607048620053,
+    "meshes": 399,
+    "drawCallsRawCumulative": 126340
+  },
+  "viewport": "1280x720",
+  "url": "http://127.0.0.1:5250/play/skybreak/",
+  "notes": "Software WebGL; terminal-state UI check accelerated simulation only. Gameplay screenshot captured after real-time drop/landing and cache interaction."
+}

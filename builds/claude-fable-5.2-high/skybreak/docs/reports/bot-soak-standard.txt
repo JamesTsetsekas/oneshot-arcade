@@ -1,0 +1,9 @@
+Bot soak, standard pace, 24 server bots, headless Node v22.12.0. Columns: winner, active duration, total sim time, highest storm phase, kills, bots that took >20 storm damage before dying, tick cost.
+run 0 seed 1000: OK winner=Juno Brack duration=670s (sim 744s) maxStormPhase=5 kills=22 stormHeavy=1 left skiff=24/24 tick mean=0.127ms p95=0.426ms max=8.4ms wall=2.9s
+run 1 seed 8919: OK winner=Thistle duration=665s (sim 738s) maxStormPhase=5 kills=22 stormHeavy=1 left skiff=24/24 tick mean=0.074ms p95=0.209ms max=2.2ms wall=1.7s
+run 2 seed 16838: OK winner=Dru Tarn duration=666s (sim 739s) maxStormPhase=5 kills=22 stormHeavy=1 left skiff=24/24 tick mean=0.059ms p95=0.163ms max=2.4ms wall=1.3s
+run 3 seed 24757: OK winner=Thistle duration=674s (sim 748s) maxStormPhase=5 kills=20 stormHeavy=3 left skiff=24/24 tick mean=0.059ms p95=0.172ms max=2.0ms wall=1.3s
+run 4 seed 32676: OK winner=Saffi duration=670s (sim 744s) maxStormPhase=5 kills=22 stormHeavy=1 left skiff=24/24 tick mean=0.086ms p95=0.193ms max=3.2ms wall=1.9s
+run 5 seed 40595: OK winner=Thistle duration=676s (sim 749s) maxStormPhase=6 kills=23 stormHeavy=0 left skiff=24/24 tick mean=0.051ms p95=0.145ms max=1.8ms wall=1.2s
+run 6 seed 48514: OK winner=Tamsin Reed duration=670s (sim 743s) maxStormPhase=5 kills=23 stormHeavy=0 left skiff=24/24 tick mean=0.075ms p95=0.229ms max=2.6ms wall=1.7s
+run 7 seed 56433: OK winner=Tamsin Reed duration=658s (sim 732s) maxStormPhase=5 kills=22 stormHeavy=1 left skiff=24/24 tick mean=0.093ms p95=0.212ms max=4.0ms wall=2.0s

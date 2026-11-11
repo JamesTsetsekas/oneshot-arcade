@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "game": "ashfall",
+  "model": "gpt-6.1-sol-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T05:49:05.3447641Z",
+  "finishedAt": "2026-11-11T06:42:33.481Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 18,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Babylon.js",
+    "React",
+    "Vitest",
+    "Playwright"
+  ],
+  "summary": "An original isometric action RPG expedition with two classes, two bosses, loot, forge upgrades, local saves and a Veteran replay.",
+  "selfScore": {
+    "polish": 6,
+    "playability": 7,
+    "fidelity": 4
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Complete compact vertical slice. Production subpath smoke and accelerated act/Veteran browser campaign passed with zero errors. Clean validation used renamed generated backups because recursive deletion was policy-blocked. See report for content and checkpoint limitations.",
+  "purity": "one-shot",
+  "durationMinutes": 53
+}

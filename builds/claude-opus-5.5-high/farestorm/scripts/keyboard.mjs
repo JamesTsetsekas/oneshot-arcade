@@ -1,0 +1,31 @@
+// Verifies real keyboard input drives the taxi through the UI (no autopilot).
+import { chromium } from "playwright-core";
+import { serve } from "./serve.mjs";
+const server = await serve();
+const browser = await chromium.launch({ channel: process.env.BROWSER ?? "msedge", headless: true, args: ["--ignore-gpu-blocklist", "--enable-gpu", "--use-angle=d3d11"] });
+const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+const errors = [];
+page.on("pageerror", (e) => errors.push(e.message));
+await page.goto("http://localhost:5472/play/claude-opus-5.5-high/farestorm/");
+await page.waitForSelector(".menu", { timeout: 60000 });
+await page.keyboard.press("Enter"); // Arcade Shift is focused
+await page.waitForTimeout(500);
+await page.click("text=Start shift");
+await page.waitForTimeout(2500);
+await page.keyboard.down("KeyW");
+await page.waitForTimeout(3000);
+const a = await page.evaluate(() => window.farestorm.session.kmh);
+await page.keyboard.down("KeyD");
+await page.keyboard.down("Space");
+await page.waitForTimeout(150);
+await page.keyboard.up("Space");
+await page.waitForTimeout(800);
+const b = await page.evaluate(() => ({ drifting: window.farestorm.session.v.drifting, kmh: window.farestorm.session.kmh }));
+await page.keyboard.up("KeyD");
+await page.keyboard.up("KeyW");
+await page.keyboard.press("Escape");
+await page.waitForTimeout(400);
+const paused = await page.evaluate(() => window.farestorm.paused);
+console.log(JSON.stringify({ kmhAfter3sW: Math.round(a), afterSnapDrift: b, pausedAfterEsc: paused, errors }));
+await browser.close();
+server.close();

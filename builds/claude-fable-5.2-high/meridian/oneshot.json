@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "game": "meridian",
+  "model": "claude-fable-5.2-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T06:46:05Z",
+  "finishedAt": "2026-11-11T08:50:07Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 65,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Babylon.js",
+    "Rapier 3D (WASM)",
+    "React",
+    "Web Audio",
+    "IndexedDB",
+    "Vitest"
+  ],
+  "summary": "A procedural harbor-city sandbox slice: ride and drive eight vehicles through live traffic and pedestrians, run four courier story missions and three activities, and outwit an evidence-based five-tier police Alert system.",
+  "selfScore": {
+    "playability": 6,
+    "polish": 5,
+    "fidelity": 6
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Verified by 65 headless simulation tests and a headless-Edge smoke run from a sub-path (no page errors; save/reload/continue works). Not verified: play with a real mouse (no pointer lock in headless), audio output (never heard), most of missions 2-4 and police chases on screen (simulation tests only, plus one mission-start and one police-arrival capture), Firefox/Safari, 1080p performance. All art and audio are procedural; no third-party assets. Bundle is 11.2 MB (3.2 MB gzip).",
+  "purity": "one-shot",
+  "durationMinutes": 124
+}

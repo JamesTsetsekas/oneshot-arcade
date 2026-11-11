@@ -1,0 +1,2 @@
+import {Simulation} from '../src/simulation';
+const s=new Simulation();s.aiEnabled=false;for(let i=0;i<220;i++)s.spawn(i%3?'soldier':'lancer',i%2,10+(i%40)*2,10+Math.floor(i/40)*10);s.vision();const start=performance.now();for(let i=0;i<200;i++)s.step();console.log(JSON.stringify({ticks:200,mobileUnits:234,msPerTick:(performance.now()-start)/200,scope:'CPU simulation only; not a rendering FPS benchmark'}));

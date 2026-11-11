@@ -1,48 +1,61 @@
+// Install / build / test every build in builds/<model>/<game>/.
+//   npm run setup -- --model gpt-6.1-sol-high --game farestorm --keep-going
 import { spawnSync } from "node:child_process";
-import { existsSync } from "node:fs";
+import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { loadCatalog, filterBuilds, root } from "./lib/catalog.mjs";
 
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const games = [
-  "shardfront-rts",
-  "ashfall-covenant-arpg",
-  "breachline-fps",
-  "last-protocol-fps",
-  "crownfall-moba",
-  "skybreak-br",
-  "meridian-run",
-  "farestorm",
-];
 const action = process.argv[2];
 const commands = {
-  setup: [["ci"], ["run", "build"]],
-  install: [["ci"]],
-  build: [["run", "build"]],
-  test: [["test"]],
+  setup: ["install", "build"],
+  install: ["install"],
+  build: ["build"],
+  test: ["test"],
 };
 if (!Object.hasOwn(commands, action)) {
-  console.error("Use npm run setup, npm run install:games, npm run build, or npm test.");
+  console.error("Use npm run setup | install:games | build | test  [-- --model a,b --game x,y --keep-going]");
   process.exit(1);
 }
-const npm = process.env.npm_execpath;
-if (!npm || !existsSync(npm)) {
+const keepGoing = process.argv.includes("--keep-going");
+const npmCli = process.env.npm_execpath;
+if (!npmCli || !fs.existsSync(npmCli)) {
   console.error("Run this script through npm so its CLI path is available.");
   process.exit(1);
 }
-for (const game of games) {
-  const directory = path.join(root, "outputs", game);
-  for (const args of commands[action]) {
-    console.log(`\n[${game}] npm ${args.join(" ")}`);
-    const result = spawnSync(process.execPath, [npm, ...args], {
-      cwd: directory,
-      stdio: "inherit",
-      windowsHide: true,
-    });
-    if (result.error || result.status !== 0) {
-      console.error(`Stopped at ${game}: ${result.error?.message ?? `exit ${result.status ?? result.signal}`}`);
-      process.exit(result.status || 1);
-    }
+const { builds } = loadCatalog();
+const selected = filterBuilds(builds, process.argv).filter((b) => ["complete", "partial"].includes(b.status));
+const statusFile = path.join(root, ".build-status.json");
+const status = fs.existsSync(statusFile) ? JSON.parse(fs.readFileSync(statusFile, "utf8")) : {};
+const failures = [];
+
+function npm(args, cwd) {
+  console.log(`\n[${path.relative(root, cwd)}] npm ${args.join(" ")}`);
+  const result = spawnSync(process.execPath, [npmCli, ...args], { cwd, stdio: "inherit", windowsHide: true });
+  return !result.error && result.status === 0;
+}
+
+for (const b of selected) {
+  const key = `${b.model}/${b.game}`;
+  if (!b.hasPackage) {
+    status[key] = { ok: true, static: true };
+    continue;
+  }
+  let ok = true;
+  for (const step of commands[action]) {
+    if (step === "install") ok = npm(b.hasLockfile ? ["ci", "--no-audit", "--no-fund"] : ["install", "--no-audit", "--no-fund"], b.dir);
+    else if (step === "build") ok = npm(["run", "build"], b.dir);
+    else if (step === "test") ok = npm(["test"], b.dir);
+    if (!ok) break;
+  }
+  if (action !== "test") status[key] = { ok, at: new Date().toISOString() };
+  if (!ok) {
+    failures.push(key);
+    if (!keepGoing) break;
   }
 }
-console.log(`\n${action} completed for all ${games.length} games.`);
+fs.writeFileSync(statusFile, JSON.stringify(status, null, 2));
+console.log(`\n${action}: ${selected.length - failures.length}/${selected.length} succeeded.`);
+if (failures.length) {
+  console.error(`Failed: ${failures.join(", ")}`);
+  process.exit(keepGoing && action !== "test" ? 0 : 1);
+}

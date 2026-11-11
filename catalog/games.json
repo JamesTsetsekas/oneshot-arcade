@@ -1,0 +1,13 @@
+{
+  "$comment": "Canonical game briefs. Add a game: add an entry here plus prompts/games/<prompt>. Order controls dashboard order.",
+  "games": [
+    { "id": "shardfront", "name": "Shardfront", "genre": "Real-time strategy", "prompt": "01-shardfront-browser-rts.md", "pitch": "Build an outpost. Command the mineral frontier.", "glyph": "△", "added": "2026-09-28" },
+    { "id": "ashfall", "name": "Ashfall Covenant", "genre": "Action RPG", "prompt": "02-ashfall-covenant-browser-arpg.md", "pitch": "Two heroes. One ruined covenant. Earn your way through the ash.", "glyph": "♜", "added": "2026-09-28" },
+    { "id": "breachline", "name": "Breachline", "genre": "Arcade FPS", "prompt": "03-breachline-browser-arcade-fps.md", "pitch": "Fast movement, readable gunfights, and a match worth finishing.", "glyph": "⌖", "added": "2026-09-28" },
+    { "id": "protocol", "name": "Last Protocol", "genre": "Tactical FPS", "prompt": "04-last-protocol-browser-tactical-fps.md", "pitch": "Buy with purpose. Hold an angle. Every round counts.", "glyph": "◈", "added": "2026-09-28" },
+    { "id": "crownfall", "name": "Crownfall", "genre": "Battle arena", "prompt": "05-crownfall-browser-moba.md", "pitch": "Choose a hero. Break the defenses. Take the Crown.", "glyph": "♛", "added": "2026-09-28" },
+    { "id": "skybreak", "name": "Skybreak", "genre": "Battle royale", "prompt": "06-skybreak-browser-battle-royale.md", "pitch": "Drop in, gear up, and outlast the closing sky.", "glyph": "◇", "added": "2026-09-28" },
+    { "id": "meridian", "name": "Meridian Run", "genre": "Open-world adventure", "prompt": "07-meridian-run-browser-open-world.md", "pitch": "One courier. A stolen contract. A city that remembers.", "glyph": "↗", "added": "2026-09-28" },
+    { "id": "farestorm", "name": "Farestorm", "genre": "Arcade driving", "prompt": "08-farestorm-browser-arcade-driving.md", "pitch": "Catch a fare. Chase the coast. Make every second pay.", "glyph": "〰", "added": "2026-09-28" }
+  ]
+}

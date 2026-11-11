@@ -1,0 +1,19 @@
+{
+  "name": "last-protocol",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5230",
+    "build": "tsc --noEmit && vite build",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "babylonjs": "8.56.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "typescript": "~5.7.3",
+    "vite": "^6.1.0"
+  }
+}

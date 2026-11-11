@@ -1,0 +1,12 @@
+{
+  "name": "Meridian Run",
+  "short_name": "Meridian Run",
+  "description": "An original browser open-world urban action sandbox set in Port Meridian.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#0d141b",
+  "theme_color": "#12202b",
+  "icons": [{ "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

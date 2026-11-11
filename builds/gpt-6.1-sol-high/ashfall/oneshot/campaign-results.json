@@ -1,0 +1,10 @@
+{
+  "result": {
+    "completed": true,
+    "difficulty": 1,
+    "victory": true,
+    "kills": 22
+  },
+  "errors": [],
+  "mode": "accelerated ordinary-intent simulation rendered in production browser"
+}

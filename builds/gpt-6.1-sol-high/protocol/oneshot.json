@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "game": "protocol",
+  "model": "gpt-6.1-sol-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T05:49:04.8906978Z",
+  "finishedAt": "2026-11-11T06:38:32.731146+00:00",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 19,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Babylon.js",
+    "Node test runner",
+    "Web Audio"
+  ],
+  "summary": "An original offline 5v5 tactical Cipher Breach match with bots, two vaults, requisitions, lethal shooting, smoke, halftime and a complete result loop.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 6,
+    "fidelity": 5
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Offline practice vertical slice; no multiplayer or services. 19 rules tests passed after fresh npm ci. Nested-path Chromium checks passed. Software WebGL capture reported 4 FPS; hardware performance is unverified. Direct cleanup was blocked; npm ci and Vite managed cleanup were used.",
+  "purity": "one-shot",
+  "durationMinutes": 49
+}

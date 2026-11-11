@@ -1,0 +1,35 @@
+{
+  "errors": [],
+  "objective": "ON BOARD · Mira · night-shift cook",
+  "pauseWorks": true,
+  "retryWorks": true,
+  "state": {
+    "x": -83.96213390605377,
+    "z": 172.92012677490402,
+    "angle": -2.4879456822543276,
+    "speed": 1.735370281698011,
+    "trip": false,
+    "target": {
+      "x": 0,
+      "z": 180,
+      "name": "Highline Station",
+      "person": "Remy · late commuter"
+    },
+    "route": [
+      {
+        "x": 0,
+        "z": 180
+      },
+      {
+        "x": 0,
+        "z": 180,
+        "name": "Highline Station",
+        "person": "Remy · late commuter"
+      }
+    ],
+    "elapsed": 24.73333333333321,
+    "deliveries": 1,
+    "time": 47.26666666666807
+  },
+  "result": "SHIFT COMPLETE / GALEPORT TAXI AUTHORITYThat's a wrap.You kept the coast moving.CRANK$1,6451FARES DELIVERED1×BEST PULSE0COLLISIONSLOCAL RECORD $1,645ANOTHER SHIFT ↗CHANGE YOUR CABBrake early. Stop in the rings. Style charges Tailwind."
+}

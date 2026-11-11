@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "game": "crownfall",
+  "model": "gpt-6-astra-high",
+  "status": "complete",
+  "purity": "one-shot",
+  "harnessVersion": "pre-harness",
+  "date": "2026-09-28",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "astra-gameplay.png",
+  "tests": {
+    "passed": 17,
+    "failed": 0
+  },
+  "readme": "README.md",
+  "verification": "docs/VERIFICATION.md",
+  "notes": ""
+}

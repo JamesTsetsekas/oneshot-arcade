@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "game": "breachline",
+  "model": "gpt-6.1-sol-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T05:49:03.4107104Z",
+  "finishedAt": "2026-11-11T06:41:44.767Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 18,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Babylon.js",
+    "React",
+    "Web Audio",
+    "Vitest",
+    "Playwright"
+  ],
+  "summary": "An offline 6v6 industrial-island FPS with bot combat, three primary loadouts, Momentum recon, fast respawns and match results.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 6,
+    "fidelity": 5
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Offline Practice vertical slice only; no online backend. Recursive cleanup was blocked by automatic command review; npm ci and build used instead. See report for exact verification and omissions.",
+  "purity": "one-shot",
+  "durationMinutes": 53
+}

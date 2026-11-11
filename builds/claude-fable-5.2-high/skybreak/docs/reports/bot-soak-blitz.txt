@@ -1,0 +1,9 @@
+Bot soak, blitz pace (0.4x storm timers), 24 server bots.
+run 0 seed 1000: OK winner=Oda Vale duration=270s (sim 343s) maxStormPhase=5 kills=22 stormHeavy=1 left skiff=24/24 tick mean=0.149ms p95=0.490ms max=5.6ms wall=1.5s
+run 1 seed 8919: OK winner=Marlo Dune duration=276s (sim 350s) maxStormPhase=6 kills=19 stormHeavy=4 left skiff=24/24 tick mean=0.091ms p95=0.323ms max=2.3ms wall=1.0s
+run 2 seed 16838: OK winner=Marrow duration=304s (sim 378s) maxStormPhase=7 kills=22 stormHeavy=1 left skiff=24/24 tick mean=0.071ms p95=0.220ms max=1.5ms wall=0.8s
+run 3 seed 24757: OK winner=Saffi duration=275s (sim 349s) maxStormPhase=6 kills=21 stormHeavy=3 left skiff=24/24 tick mean=0.072ms p95=0.212ms max=2.0ms wall=0.8s
+run 4 seed 32676: OK winner=Sable Finch duration=293s (sim 367s) maxStormPhase=7 kills=21 stormHeavy=2 left skiff=24/24 tick mean=0.129ms p95=0.488ms max=3.2ms wall=1.4s
+run 5 seed 40595: OK winner=Rook Ainsley duration=274s (sim 348s) maxStormPhase=6 kills=22 stormHeavy=1 left skiff=24/24 tick mean=0.061ms p95=0.173ms max=3.5ms wall=0.6s
+run 6 seed 48514: OK winner=Mossgate duration=271s (sim 345s) maxStormPhase=6 kills=23 stormHeavy=1 left skiff=24/24 tick mean=0.125ms p95=0.382ms max=13.7ms wall=1.3s
+run 7 seed 56433: OK winner=Lark Ansel duration=268s (sim 342s) maxStormPhase=5 kills=22 stormHeavy=1 left skiff=24/24 tick mean=0.126ms p95=0.302ms max=7.9ms wall=1.3s

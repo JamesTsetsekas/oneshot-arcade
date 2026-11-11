@@ -1,0 +1,4 @@
+import { chromium } from '@playwright/test';
+const browser=await chromium.launch({headless:true,args:['--use-angle=swiftshader','--enable-webgl','--ignore-gpu-blocklist']});
+const page=await browser.newPage({viewport:{width:1280,height:720}});const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+await page.goto('http://127.0.0.1:5250/play/skybreak/');await page.getByRole('button',{name:'QUICK DROP'}).waitFor();await page.waitForTimeout(5000);await page.screenshot({path:'oneshot/menu.png'});await page.getByRole('button',{name:'PRACTICE RANGE'}).click();await page.waitForTimeout(3000);await page.screenshot({path:'oneshot/practice.png'});console.log(JSON.stringify({errors,body:(await page.locator('body').innerText()).slice(0,1500)},null,2));await browser.close();

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#14191c" />
+    <meta name="description" content="One prompt, every model. Original browser games built one-shot by different AI models, side by side." />
+    <title>Oneshot Arcade</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="./" aria-label="Oneshot Arcade home">
+        <span class="brand-mark" aria-hidden="true">1×</span>
+        <span class="brand-name">ONESHOT<b>ARCADE</b></span>
+      </a>
+      <nav class="top-links">
+        <button type="button" class="link-button" id="open-harness">THE HARNESS</button>
+        <a id="repo-link" href="https://github.com/JamesTsetsekas/oneshot-arcade" target="_blank" rel="noopener">GITHUB ↗</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">ONE PROMPT · ONE TAKE · EVERY MODEL</p>
+          <h1>Same brief.<br /><em>Different minds.</em></h1>
+        </div>
+        <div class="intro-note">
+          <p>
+            Each game below started as one detailed design brief. Each model got that brief
+            in the same harness, with no hints, no human feedback, and no second take.
+            Play the builds side by side and judge for yourself.
+          </p>
+          <dl class="stats" id="stats" aria-live="polite"></dl>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="View controls">
+        <div class="tabs" role="tablist" aria-label="View">
+          <button role="tab" type="button" data-view="matrix">MATRIX</button>
+          <button role="tab" type="button" data-view="game">BY GAME</button>
+          <button role="tab" type="button" data-view="model">BY MODEL</button>
+        </div>
+        <div class="filters" id="model-filters" aria-label="Show models"></div>
+      </section>
+
+      <section id="view" class="view" aria-live="polite">
+        <p class="loading">Loading the arcade…</p>
+      </section>
+
+      <section class="footnote">
+        <div>
+          <b>HOW A RUN WORKS</b>
+          <p>
+            A run starts in an empty workspace containing the brief and the
+            <button type="button" class="inline-link" data-open-harness>shared harness</button>.
+            The model plans, builds, tests, screenshots, and writes an honest report on its own.
+            Builds marked <span class="purity-tag">ITERATED</span> predate the harness and had more than one attempt.
+          </p>
+        </div>
+        <div>
+          <b>PLAY LOCALLY</b>
+          <p>
+            Clone the repo, run <code>npm run setup</code> and <code>npm start</code>, then open
+            <code>127.0.0.1:4160</code>. Saves stay in your browser. No account is needed.
+          </p>
+        </div>
+        <div>
+          <b>ADD A GAME OR MODEL</b>
+          <p>
+            Add a brief to <code>prompts/games/</code> or a model to <code>catalog/models.json</code>,
+            then run <code>npm run new-run</code>. The README has the details.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>ONESHOT ARCADE / ORIGINAL GAMES, MODEL-BUILT</span>
+      <span id="generated"></span>
+    </footer>
+
+    <dialog id="build-dialog" class="sheet" aria-labelledby="build-title">
+      <div class="sheet-inner" id="build-body"></div>
+    </dialog>
+
+    <dialog id="prompt-dialog" class="sheet prompt-sheet" aria-labelledby="prompt-title">
+      <div class="sheet-head">
+        <div>
+          <p class="eyebrow" id="prompt-eyebrow">THE BRIEF</p>
+          <h2 id="prompt-title"></h2>
+        </div>
+        <button type="button" class="close" data-close aria-label="Close">×</button>
+      </div>
+      <div class="prompt-body"><pre id="prompt-content">Loading…</pre></div>
+      <div class="sheet-foot">
+        <a id="prompt-raw" href="#" target="_blank" rel="noopener">OPEN MARKDOWN ↗</a>
+        <button type="button" data-close>CLOSE</button>
+      </div>
+    </dialog>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

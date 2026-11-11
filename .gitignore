@@ -25,3 +25,4 @@ Thumbs.db
 site/
 playwright-report/
 test-results/
+.build-status.json
