@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "game": "skybreak",
+  "model": "claude-sonnet-5.5-high",
+  "status": "complete",
+  "harnessVersion": "v1.1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T15:42:38Z",
+  "finishedAt": "2026-11-11T17:18:47Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 68,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "three.js",
+    "Vitest",
+    "Web Audio"
+  ],
+  "summary": "A complete single-player 24-seat battle royale loop (staging, skiff, glide, loot, fight bots, shrinking storm, results, requeue) on a procedural 1.2 km island, with a headless-tested authoritative simulation and a Practice Range.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 6,
+    "fidelity": 5
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Runs fully locally (no server): the authoritative 30 Hz simulation is hosted in the tab, so networking, prediction, services, Rapier/Babylon/React from the brief are not built. Verified with headless Chrome (software WebGL) against the production build served from a sub-path; real-GPU performance and real pointer-lock feel were not measured.",
+  "purity": "one-shot",
+  "durationMinutes": 96
+}
