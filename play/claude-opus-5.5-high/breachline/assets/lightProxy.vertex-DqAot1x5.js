@@ -1,0 +1,1 @@
+export{cr as lightProxyVertexShader}from"./session-CPKDxFhx.js";

@@ -1,0 +1,1 @@
+export{mi as colorVertexShader}from"./app--j10jIDz.js";

@@ -1,0 +1,1 @@
+export{x as proceduralVertexShaderWGSL}from"./session-CPKDxFhx.js";

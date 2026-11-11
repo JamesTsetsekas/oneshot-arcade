@@ -1,0 +1,1 @@
+export{Ot as geometryVertexShaderWGSL}from"./app--j10jIDz.js";

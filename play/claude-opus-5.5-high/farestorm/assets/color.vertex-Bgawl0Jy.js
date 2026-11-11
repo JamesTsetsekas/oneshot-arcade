@@ -1,0 +1,1 @@
+export{nn as colorVertexShaderWGSL}from"./app--j10jIDz.js";

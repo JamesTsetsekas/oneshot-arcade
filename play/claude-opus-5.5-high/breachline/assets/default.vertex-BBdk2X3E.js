@@ -1,0 +1,1 @@
+export{ci as defaultVertexShader}from"./session-CPKDxFhx.js";

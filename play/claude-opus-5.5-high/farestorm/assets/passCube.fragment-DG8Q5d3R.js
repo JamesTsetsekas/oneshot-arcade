@@ -1,0 +1,1 @@
+export{T as passCubePixelShaderWGSL}from"./app--j10jIDz.js";

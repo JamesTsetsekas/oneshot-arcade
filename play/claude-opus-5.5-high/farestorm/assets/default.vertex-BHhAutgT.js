@@ -1,0 +1,1 @@
+export{ci as defaultVertexShader}from"./app--j10jIDz.js";

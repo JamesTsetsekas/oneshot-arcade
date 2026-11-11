@@ -1,0 +1,1 @@
+export{nn as colorVertexShaderWGSL}from"./session-CPKDxFhx.js";

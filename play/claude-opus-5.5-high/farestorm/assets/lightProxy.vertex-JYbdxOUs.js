@@ -1,0 +1,1 @@
+export{B as lightProxyVertexShaderWGSL}from"./app--j10jIDz.js";

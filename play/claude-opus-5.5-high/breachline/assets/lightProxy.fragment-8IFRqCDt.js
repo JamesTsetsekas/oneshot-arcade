@@ -1,0 +1,1 @@
+export{V as lightProxyPixelShaderWGSL}from"./session-CPKDxFhx.js";

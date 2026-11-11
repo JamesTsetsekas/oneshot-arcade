@@ -1,0 +1,1 @@
+export{bn as gaussianSplattingFragmentDeclarationWGSL}from"./session-CPKDxFhx.js";

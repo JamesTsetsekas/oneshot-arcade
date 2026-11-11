@@ -1,0 +1,1 @@
+export{X as iblVoxelGridPixelShaderWGSL}from"./session-CPKDxFhx.js";

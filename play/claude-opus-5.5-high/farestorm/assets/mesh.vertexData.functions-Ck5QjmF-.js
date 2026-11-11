@@ -1,0 +1,1 @@
+export{Mi as OptimizeIndices}from"./app--j10jIDz.js";

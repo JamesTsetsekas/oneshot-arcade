@@ -1,0 +1,1 @@
+export{O as particlesPixelShaderWGSL}from"./app--j10jIDz.js";

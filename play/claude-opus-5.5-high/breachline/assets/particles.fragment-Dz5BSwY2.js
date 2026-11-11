@@ -1,0 +1,1 @@
+export{Xn as particlesPixelShader}from"./session-CPKDxFhx.js";

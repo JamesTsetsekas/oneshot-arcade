@@ -1,0 +1,1 @@
+export{hi as colorPixelShader}from"./app--j10jIDz.js";

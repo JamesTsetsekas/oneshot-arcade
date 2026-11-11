@@ -1,0 +1,1 @@
+export{Xt as defaultVertexShaderWGSL}from"./session-CPKDxFhx.js";

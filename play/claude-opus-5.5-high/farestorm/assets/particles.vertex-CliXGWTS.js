@@ -1,0 +1,1 @@
+export{D as particlesVertexShaderWGSL}from"./app--j10jIDz.js";

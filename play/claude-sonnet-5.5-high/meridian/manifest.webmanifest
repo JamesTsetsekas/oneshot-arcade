@@ -1,0 +1,10 @@
+{
+  "name": "Meridian Run",
+  "short_name": "Meridian",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "background_color": "#0f3b3f",
+  "theme_color": "#0f3b3f",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

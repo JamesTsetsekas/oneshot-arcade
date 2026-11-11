@@ -1,0 +1,1 @@
+export{it as iblCombineVoxelGridsPixelShaderWGSL}from"./app--j10jIDz.js";

@@ -1,0 +1,1 @@
+export{_r as iblVoxelGridVertexShader}from"./app--j10jIDz.js";

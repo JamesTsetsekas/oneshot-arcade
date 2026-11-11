@@ -1,0 +1,1 @@
+export{n as volumetricLightScatteringPassVertexShaderWGSL}from"./app--j10jIDz.js";

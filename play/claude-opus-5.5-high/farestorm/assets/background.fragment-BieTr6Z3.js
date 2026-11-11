@@ -1,0 +1,1 @@
+export{Ti as backgroundPixelShader}from"./app--j10jIDz.js";

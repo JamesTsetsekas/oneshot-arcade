@@ -1,0 +1,1 @@
+export{Xn as particlesPixelShader}from"./app--j10jIDz.js";

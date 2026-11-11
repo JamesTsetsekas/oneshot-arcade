@@ -1,0 +1,1 @@
+export{li as defaultPixelShader}from"./app--j10jIDz.js";

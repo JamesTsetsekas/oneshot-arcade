@@ -1,0 +1,1 @@
+export{Tr as iblDominantDirectionPixelShader}from"./app--j10jIDz.js";

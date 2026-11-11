@@ -1,0 +1,1 @@
+export{X as iblVoxelGridPixelShaderWGSL}from"./app--j10jIDz.js";

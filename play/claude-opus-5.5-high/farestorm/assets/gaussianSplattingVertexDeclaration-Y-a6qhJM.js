@@ -1,0 +1,1 @@
+export{yn as gaussianSplattingVertexDeclarationWGSL}from"./app--j10jIDz.js";

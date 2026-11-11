@@ -1,0 +1,1406 @@
+{
+  "generatedAt": "2026-11-11T19:52:20.061Z",
+  "repoUrl": "https://github.com/JamesTsetsekas/oneshot-arcade",
+  "games": [
+    {
+      "id": "shardfront",
+      "name": "Shardfront",
+      "genre": "Real-time strategy",
+      "prompt": "01-shardfront-browser-rts.md",
+      "pitch": "Build an outpost. Command the mineral frontier.",
+      "glyph": "△",
+      "added": "2026-09-28"
+    },
+    {
+      "id": "ashfall",
+      "name": "Ashfall Covenant",
+      "genre": "Action RPG",
+      "prompt": "02-ashfall-covenant-browser-arpg.md",
+      "pitch": "Two heroes. One ruined covenant. Earn your way through the ash.",
+      "glyph": "♜",
+      "added": "2026-09-28"
+    },
+    {
+      "id": "breachline",
+      "name": "Breachline",
+      "genre": "Arcade FPS",
+      "prompt": "03-breachline-browser-arcade-fps.md",
+      "pitch": "Fast movement, readable gunfights, and a match worth finishing.",
+      "glyph": "⌖",
+      "added": "2026-09-28"
+    },
+    {
+      "id": "protocol",
+      "name": "Last Protocol",
+      "genre": "Tactical FPS",
+      "prompt": "04-last-protocol-browser-tactical-fps.md",
+      "pitch": "Buy with purpose. Hold an angle. Every round counts.",
+      "glyph": "◈",
+      "added": "2026-09-28"
+    },
+    {
+      "id": "crownfall",
+      "name": "Crownfall",
+      "genre": "Battle arena",
+      "prompt": "05-crownfall-browser-moba.md",
+      "pitch": "Choose a hero. Break the defenses. Take the Crown.",
+      "glyph": "♛",
+      "added": "2026-09-28"
+    },
+    {
+      "id": "skybreak",
+      "name": "Skybreak",
+      "genre": "Battle royale",
+      "prompt": "06-skybreak-browser-battle-royale.md",
+      "pitch": "Drop in, gear up, and outlast the closing sky.",
+      "glyph": "◇",
+      "added": "2026-09-28"
+    },
+    {
+      "id": "meridian",
+      "name": "Meridian Run",
+      "genre": "Open-world adventure",
+      "prompt": "07-meridian-run-browser-open-world.md",
+      "pitch": "One courier. A stolen contract. A city that remembers.",
+      "glyph": "↗",
+      "added": "2026-09-28"
+    },
+    {
+      "id": "farestorm",
+      "name": "Farestorm",
+      "genre": "Arcade driving",
+      "prompt": "08-farestorm-browser-arcade-driving.md",
+      "pitch": "Catch a fare. Chase the coast. Make every second pay.",
+      "glyph": "〰",
+      "added": "2026-09-28"
+    }
+  ],
+  "models": [
+    {
+      "id": "gpt-6-astra-high",
+      "label": "GPT-6 Astra",
+      "vendor": "OpenAI",
+      "model": "gpt-6-astra",
+      "harness": "Codex",
+      "effort": "high",
+      "color": "#4fb8a6"
+    },
+    {
+      "id": "gpt-6.1-sol-high",
+      "label": "GPT-6.1 Sol",
+      "vendor": "OpenAI",
+      "model": "gpt-6.1-sol",
+      "harness": "Codex",
+      "effort": "high",
+      "color": "#e0a84a"
+    },
+    {
+      "id": "claude-fable-5.2-high",
+      "label": "Fable 5.2",
+      "vendor": "Anthropic",
+      "model": "claude-fable-5-2",
+      "harness": "Claude Code",
+      "effort": "high",
+      "color": "#d77757"
+    },
+    {
+      "id": "claude-opus-5.5-high",
+      "label": "Opus 5.5",
+      "vendor": "Anthropic",
+      "model": "claude-opus-5-5",
+      "harness": "Claude Code",
+      "effort": "high",
+      "color": "#9c84e0"
+    },
+    {
+      "id": "claude-sonnet-5.5-high",
+      "label": "Sonnet 5.5",
+      "vendor": "Anthropic",
+      "model": "claude-sonnet-5-5",
+      "harness": "Claude Code",
+      "effort": "high",
+      "color": "#6f9be8"
+    }
+  ],
+  "builds": [
+    {
+      "model": "gpt-6-astra-high",
+      "game": "ashfall",
+      "status": "complete",
+      "purity": "iterated",
+      "date": "2026-09-28",
+      "harnessVersion": "pre-harness",
+      "durationMinutes": null,
+      "tests": {
+        "passed": 15,
+        "failed": 0
+      },
+      "stack": null,
+      "summary": null,
+      "notes": "Remade in a second pass after an earlier attempt.",
+      "selfScore": null,
+      "playUrl": "./play/gpt-6-astra-high/ashfall/",
+      "screenshotUrl": "./shots/gpt-6-astra-high/ashfall.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/gpt-6-astra-high/ashfall",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6-astra-high/ashfall/README.md",
+      "reportUrl": null,
+      "verificationUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6-astra-high/ashfall/docs/ASTRA-VERIFICATION.md"
+    },
+    {
+      "model": "gpt-6-astra-high",
+      "game": "breachline",
+      "status": "complete",
+      "purity": "iterated",
+      "date": "2026-09-28",
+      "harnessVersion": "pre-harness",
+      "durationMinutes": null,
+      "tests": {
+        "passed": 27,
+        "failed": 0
+      },
+      "stack": null,
+      "summary": null,
+      "notes": "Rebuilt after an earlier attempt. Includes an optional localhost WebSocket relay (`npm run server`).",
+      "selfScore": null,
+      "playUrl": "./play/gpt-6-astra-high/breachline/",
+      "screenshotUrl": "./shots/gpt-6-astra-high/breachline.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/gpt-6-astra-high/breachline",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6-astra-high/breachline/README.md",
+      "reportUrl": null,
+      "verificationUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6-astra-high/breachline/docs/VERIFICATION.md"
+    },
+    {
+      "model": "gpt-6-astra-high",
+      "game": "crownfall",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-09-28",
+      "harnessVersion": "pre-harness",
+      "durationMinutes": null,
+      "tests": {
+        "passed": 17,
+        "failed": 0
+      },
+      "stack": null,
+      "summary": null,
+      "notes": "",
+      "selfScore": null,
+      "playUrl": "./play/gpt-6-astra-high/crownfall/",
+      "screenshotUrl": "./shots/gpt-6-astra-high/crownfall.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/gpt-6-astra-high/crownfall",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6-astra-high/crownfall/README.md",
+      "reportUrl": null,
+      "verificationUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6-astra-high/crownfall/docs/VERIFICATION.md"
+    },
+    {
+      "model": "gpt-6-astra-high",
+      "game": "farestorm",
+      "status": "complete",
+      "purity": "iterated",
+      "date": "2026-09-28",
+      "harnessVersion": "pre-harness",
+      "durationMinutes": null,
+      "tests": {
+        "passed": 30,
+        "failed": 0
+      },
+      "stack": null,
+      "summary": null,
+      "notes": "An earlier approved build was kept rather than regenerated.",
+      "selfScore": null,
+      "playUrl": "./play/gpt-6-astra-high/farestorm/",
+      "screenshotUrl": "./shots/gpt-6-astra-high/farestorm.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/gpt-6-astra-high/farestorm",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6-astra-high/farestorm/README.md",
+      "reportUrl": null,
+      "verificationUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6-astra-high/farestorm/docs/verification.md"
+    },
+    {
+      "model": "gpt-6-astra-high",
+      "game": "meridian",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-09-28",
+      "harnessVersion": "pre-harness",
+      "durationMinutes": null,
+      "tests": {
+        "passed": 18,
+        "failed": 0
+      },
+      "stack": null,
+      "summary": null,
+      "notes": "",
+      "selfScore": null,
+      "playUrl": "./play/gpt-6-astra-high/meridian/",
+      "screenshotUrl": "./shots/gpt-6-astra-high/meridian.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/gpt-6-astra-high/meridian",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6-astra-high/meridian/README.md",
+      "reportUrl": null,
+      "verificationUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6-astra-high/meridian/docs/VERIFICATION.md"
+    },
+    {
+      "model": "gpt-6-astra-high",
+      "game": "protocol",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-09-28",
+      "harnessVersion": "pre-harness",
+      "durationMinutes": null,
+      "tests": {
+        "passed": 38,
+        "failed": 0
+      },
+      "stack": null,
+      "summary": null,
+      "notes": "",
+      "selfScore": null,
+      "playUrl": "./play/gpt-6-astra-high/protocol/",
+      "screenshotUrl": "./shots/gpt-6-astra-high/protocol.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/gpt-6-astra-high/protocol",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6-astra-high/protocol/README.md",
+      "reportUrl": null,
+      "verificationUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6-astra-high/protocol/docs/VERIFICATION.md"
+    },
+    {
+      "model": "gpt-6-astra-high",
+      "game": "shardfront",
+      "status": "complete",
+      "purity": "iterated",
+      "date": "2026-09-28",
+      "harnessVersion": "pre-harness",
+      "durationMinutes": null,
+      "tests": {
+        "passed": 18,
+        "failed": 0
+      },
+      "stack": null,
+      "summary": null,
+      "notes": "Remade in a second pass after an earlier attempt.",
+      "selfScore": null,
+      "playUrl": "./play/gpt-6-astra-high/shardfront/",
+      "screenshotUrl": "./shots/gpt-6-astra-high/shardfront.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/gpt-6-astra-high/shardfront",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6-astra-high/shardfront/README.md",
+      "reportUrl": null,
+      "verificationUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6-astra-high/shardfront/docs/VERIFICATION.md"
+    },
+    {
+      "model": "gpt-6-astra-high",
+      "game": "skybreak",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-09-28",
+      "harnessVersion": "pre-harness",
+      "durationMinutes": null,
+      "tests": {
+        "passed": 17,
+        "failed": 0
+      },
+      "stack": null,
+      "summary": null,
+      "notes": "",
+      "selfScore": null,
+      "playUrl": "./play/gpt-6-astra-high/skybreak/",
+      "screenshotUrl": "./shots/gpt-6-astra-high/skybreak.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/gpt-6-astra-high/skybreak",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6-astra-high/skybreak/README.md",
+      "reportUrl": null,
+      "verificationUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6-astra-high/skybreak/docs/VERIFICATION.md"
+    },
+    {
+      "model": "gpt-6.1-sol-high",
+      "game": "ashfall",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 53,
+      "tests": {
+        "passed": 18,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "React",
+        "Vitest",
+        "Playwright"
+      ],
+      "summary": "An original isometric action RPG expedition with two classes, two bosses, loot, forge upgrades, local saves and a Veteran replay.",
+      "notes": "Complete compact vertical slice. Production subpath smoke and accelerated act/Veteran browser campaign passed with zero errors. Clean validation used renamed generated backups because recursive deletion was policy-blocked. See report for content and checkpoint limitations.",
+      "selfScore": {
+        "polish": 6,
+        "playability": 7,
+        "fidelity": 4
+      },
+      "playUrl": "./play/gpt-6.1-sol-high/ashfall/",
+      "screenshotUrl": "./shots/gpt-6.1-sol-high/ashfall.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/gpt-6.1-sol-high/ashfall",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6.1-sol-high/ashfall/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6.1-sol-high/ashfall/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "gpt-6.1-sol-high",
+      "game": "breachline",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 53,
+      "tests": {
+        "passed": 18,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "React",
+        "Web Audio",
+        "Vitest",
+        "Playwright"
+      ],
+      "summary": "An offline 6v6 industrial-island FPS with bot combat, three primary loadouts, Momentum recon, fast respawns and match results.",
+      "notes": "Offline Practice vertical slice only; no online backend. Recursive cleanup was blocked by automatic command review; npm ci and build used instead. See report for exact verification and omissions.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 6,
+        "fidelity": 5
+      },
+      "playUrl": "./play/gpt-6.1-sol-high/breachline/",
+      "screenshotUrl": "./shots/gpt-6.1-sol-high/breachline.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/gpt-6.1-sol-high/breachline",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6.1-sol-high/breachline/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6.1-sol-high/breachline/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "gpt-6.1-sol-high",
+      "game": "crownfall",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 36,
+      "tests": {
+        "passed": 20,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Three.js",
+        "React",
+        "Vite"
+      ],
+      "summary": "An offline 3v3 sky-island siege with six selectable hero profiles, two wave lanes, a fountain shop, a neutral siege boss, and gated Crown Engine victory.",
+      "notes": "Reduced offline vertical slice, not the production multiplayer MVP. Hero kits, bots, navigation and shop are simplified. No network services or external assets.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 7,
+        "fidelity": 4
+      },
+      "playUrl": "./play/gpt-6.1-sol-high/crownfall/",
+      "screenshotUrl": "./shots/gpt-6.1-sol-high/crownfall.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/gpt-6.1-sol-high/crownfall",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6.1-sol-high/crownfall/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6.1-sol-high/crownfall/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "gpt-6.1-sol-high",
+      "game": "farestorm",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 33,
+      "tests": {
+        "passed": 12,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "Web Audio"
+      ],
+      "summary": "A sunlit coastal taxi score chase with three cab tunings, timed fares, traffic, Pulse and Tailwind, and a complete repeatable shift.",
+      "notes": "Compact Arcade Shift vertical slice. Custom planar physics; no Rapier, other modes, ghosts, PWA or online leaderboard. See report for validation and scope.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 7,
+        "fidelity": 4
+      },
+      "playUrl": "./play/gpt-6.1-sol-high/farestorm/",
+      "screenshotUrl": "./shots/gpt-6.1-sol-high/farestorm.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/gpt-6.1-sol-high/farestorm",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6.1-sol-high/farestorm/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6.1-sol-high/farestorm/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "gpt-6.1-sol-high",
+      "game": "meridian",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 48,
+      "tests": {
+        "passed": 12,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "Rapier",
+        "Web Audio",
+        "IndexedDB"
+      ],
+      "summary": "Deliver parcels and recover port evidence in an original coastal city with arcade driving, traffic, vehicle switching, patrol escape and local checkpoints.",
+      "notes": "Compact 360 m district; two simplified jobs and repeat deliveries. Arcade vehicle physics, visual pedestrian routes and simplified police. Clean npm ci succeeded with offline/no-audit flags; no full natural-play browser mission completion or FPS benchmark.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 6,
+        "fidelity": 4
+      },
+      "playUrl": "./play/gpt-6.1-sol-high/meridian/",
+      "screenshotUrl": "./shots/gpt-6.1-sol-high/meridian.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/gpt-6.1-sol-high/meridian",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6.1-sol-high/meridian/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6.1-sol-high/meridian/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "gpt-6.1-sol-high",
+      "game": "protocol",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 49,
+      "tests": {
+        "passed": 19,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "Node test runner",
+        "Web Audio"
+      ],
+      "summary": "An original offline 5v5 tactical Cipher Breach match with bots, two vaults, requisitions, lethal shooting, smoke, halftime and a complete result loop.",
+      "notes": "Offline practice vertical slice; no multiplayer or services. 19 rules tests passed after fresh npm ci. Nested-path Chromium checks passed. Software WebGL capture reported 4 FPS; hardware performance is unverified. Direct cleanup was blocked; npm ci and Vite managed cleanup were used.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 6,
+        "fidelity": 5
+      },
+      "playUrl": "./play/gpt-6.1-sol-high/protocol/",
+      "screenshotUrl": "./shots/gpt-6.1-sol-high/protocol.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/gpt-6.1-sol-high/protocol",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6.1-sol-high/protocol/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6.1-sol-high/protocol/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "gpt-6.1-sol-high",
+      "game": "shardfront",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 31,
+      "tests": {
+        "passed": 16,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Three.js",
+        "React",
+        "Vitest",
+        "Playwright"
+      ],
+      "summary": "A local 3D RTS skirmish: harvest, build, train combined arms, cross Glass Ravine, and destroy the enemy relay.",
+      "notes": "Reduced rosters and local AI; no networking, replay playback or full scripted tutorial. See report for verification and limitations.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 6,
+        "fidelity": 5
+      },
+      "playUrl": "./play/gpt-6.1-sol-high/shardfront/",
+      "screenshotUrl": "./shots/gpt-6.1-sol-high/shardfront.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/gpt-6.1-sol-high/shardfront",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6.1-sol-high/shardfront/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6.1-sol-high/shardfront/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "gpt-6.1-sol-high",
+      "game": "skybreak",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 50,
+      "tests": {
+        "passed": 25,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Babylon.js",
+        "React",
+        "Vite",
+        "Web Audio"
+      ],
+      "summary": "Drop into an original floating salvage island, fight 23 local bots, loot resonance caches, and outlast the closing Riftstorm.",
+      "notes": "Complete offline local-bot core loop. 10 production browser checks passed at a nested URL. Target hardware performance and online multiplayer are unverified; see report for reduced scope and clean-install details.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 6,
+        "fidelity": 4
+      },
+      "playUrl": "./play/gpt-6.1-sol-high/skybreak/",
+      "screenshotUrl": "./shots/gpt-6.1-sol-high/skybreak.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/gpt-6.1-sol-high/skybreak",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6.1-sol-high/skybreak/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/gpt-6.1-sol-high/skybreak/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-fable-5.2-high",
+      "game": "ashfall",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 86,
+      "tests": {
+        "passed": 64,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "React",
+        "Vitest",
+        "Web Audio",
+        "IndexedDB"
+      ],
+      "summary": "An isometric click-to-move action RPG slice with two full classes, a seeded wilderness and three-floor crypt, ten enemy families, two multi-phase bosses, affix loot with crafting, IndexedDB saves, Veteran difficulty and Target Hunt — all assets procedural.",
+      "notes": "Core loop is completed end to end by an autopilot in the test suite, and the production build was toured in headless Edge from a sub-path with no console errors; no human playtest, and frame rate on real GPUs is unverified. Combat in the browser tour was driven through simulation intents, not real pointer events. node scripts/screenshot.mjs needs a system Edge or Chrome.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 6,
+        "fidelity": 6
+      },
+      "playUrl": "./play/claude-fable-5.2-high/ashfall/",
+      "screenshotUrl": "./shots/claude-fable-5.2-high/ashfall.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-fable-5.2-high/ashfall",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-fable-5.2-high/ashfall/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-fable-5.2-high/ashfall/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-fable-5.2-high",
+      "game": "breachline",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 106,
+      "tests": {
+        "passed": 57,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "Rapier (WASM)",
+        "React",
+        "Web Workers",
+        "Web Audio",
+        "Vitest"
+      ],
+      "summary": "Offline 6v6 Team Clash FPS against bots on an original map, run by an authoritative Web Worker room with client prediction, binary snapshots and lag compensation, plus loadouts, Momentum support actions and progression.",
+      "notes": "Practice (bots) only: no online backend. Never human-playtested and audio never auditioned; verified by 57 headless tests and an automated full match on the production build served from a sub-path. Add ?demo=1 to watch an autopilot play without Pointer Lock.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 6,
+        "fidelity": 6
+      },
+      "playUrl": "./play/claude-fable-5.2-high/breachline/",
+      "screenshotUrl": "./shots/claude-fable-5.2-high/breachline.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-fable-5.2-high/breachline",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-fable-5.2-high/breachline/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-fable-5.2-high/breachline/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-fable-5.2-high",
+      "game": "crownfall",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 115,
+      "tests": {
+        "passed": 83,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Three.js",
+        "React",
+        "Web Worker",
+        "Web Audio API",
+        "Vitest",
+        "Playwright (dev tooling)"
+      ],
+      "summary": "A single-player 3v3 MOBA vertical slice: six original heroes, 32 items, fog of war, jungle and objectives, and full Seal/Core Tower/Crown Engine rules on a two-lane sky-island, simulated authoritatively at 30 Hz in a Web Worker and played with two allied bots against three enemy bots.",
+      "notes": "Single-player only: the authoritative simulation runs in a Web Worker in the page; there is no network server, matchmaking or multiplayer. All art, icons and audio are procedural (no imported assets). Verified only in headless Microsoft Edge via scripts (83 sim tests, 29 real-input browser checks including a full match); never played by a human, audio never heard. The ?autostart=<hero> URL parameter and window.__crownfall debug handle exist for the screenshot/playtest tools in tools/.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 6,
+        "fidelity": 6
+      },
+      "playUrl": "./play/claude-fable-5.2-high/crownfall/",
+      "screenshotUrl": "./shots/claude-fable-5.2-high/crownfall.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-fable-5.2-high/crownfall",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-fable-5.2-high/crownfall/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-fable-5.2-high/crownfall/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-fable-5.2-high",
+      "game": "farestorm",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 93,
+      "tests": {
+        "passed": 42,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "Rapier 3D (WASM)",
+        "React",
+        "Web Audio",
+        "IndexedDB",
+        "Vitest"
+      ],
+      "summary": "An original arcade taxi slice: three raycast-wheel storm cabs, a procedural six-district coastal city with 32 destinations and 18 shortcuts, signal-obeying traffic, and a full fare loop with Pulse style chains, Tailwind boost, four modes, results and local records.",
+      "notes": "Never played by a human: handling and balance were tuned from headless telemetry, an autopilot and screenshots. All art, audio and maps are generated in code. JS bundle is 11 MB (3.2 MB gzip). Gamepad, audio-by-ear and non-Chromium browsers are unverified. No ghosts, leaderboard or PWA cache.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 7,
+        "fidelity": 6
+      },
+      "playUrl": "./play/claude-fable-5.2-high/farestorm/",
+      "screenshotUrl": "./shots/claude-fable-5.2-high/farestorm.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-fable-5.2-high/farestorm",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-fable-5.2-high/farestorm/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-fable-5.2-high/farestorm/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-fable-5.2-high",
+      "game": "meridian",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 124,
+      "tests": {
+        "passed": 65,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "Rapier 3D (WASM)",
+        "React",
+        "Web Audio",
+        "IndexedDB",
+        "Vitest"
+      ],
+      "summary": "A procedural harbor-city sandbox slice: ride and drive eight vehicles through live traffic and pedestrians, run four courier story missions and three activities, and outwit an evidence-based five-tier police Alert system.",
+      "notes": "Verified by 65 headless simulation tests and a headless-Edge smoke run from a sub-path (no page errors; save/reload/continue works). Not verified: play with a real mouse (no pointer lock in headless), audio output (never heard), most of missions 2-4 and police chases on screen (simulation tests only, plus one mission-start and one police-arrival capture), Firefox/Safari, 1080p performance. All art and audio are procedural; no third-party assets. Bundle is 11.2 MB (3.2 MB gzip).",
+      "selfScore": {
+        "playability": 6,
+        "polish": 5,
+        "fidelity": 6
+      },
+      "playUrl": "./play/claude-fable-5.2-high/meridian/",
+      "screenshotUrl": "./shots/claude-fable-5.2-high/meridian.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-fable-5.2-high/meridian",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-fable-5.2-high/meridian/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-fable-5.2-high/meridian/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-fable-5.2-high",
+      "game": "protocol",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 125,
+      "tests": {
+        "passed": 96,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "React",
+        "Web Audio API",
+        "Vitest",
+        "Playwright"
+      ],
+      "summary": "A single-player vertical slice of a 5v5 tactical shooter: full Cipher Breach matches against server-side bots on an original two-vault map, with 12 weapons, five utility items, round economy and an in-process authoritative 64 Hz simulation.",
+      "notes": "Local only: no online multiplayer, matchmaking or services. Not hand-played by a human; verified by 96 headless tests and a 20-check scripted run of the production build in headless Edge. Gameplay screenshots use attract mode (?autopilot=1), where the local seat is bot-driven. The match requests fullscreen and Pointer Lock; Esc pauses.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 7,
+        "fidelity": 5
+      },
+      "playUrl": "./play/claude-fable-5.2-high/protocol/",
+      "screenshotUrl": "./shots/claude-fable-5.2-high/protocol.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-fable-5.2-high/protocol",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-fable-5.2-high/protocol/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-fable-5.2-high/protocol/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-fable-5.2-high",
+      "game": "shardfront",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 104,
+      "tests": {
+        "passed": 43,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Three.js",
+        "React",
+        "Vitest",
+        "Web Audio API",
+        "playwright-core (dev)"
+      ],
+      "summary": "A playable browser RTS slice: two asymmetric factions, worker economy, base building, tech, fog of war, three AI levels, tutorial, verified replays and post-game stats on one procedurally built map, running on a deterministic 20 Hz simulation.",
+      "notes": "All art and audio are generated by code. No human played a full match: the opening, surrender, post-game and replay were driven with real input in headless Edge; mid-game screenshots use an AI autopilot debug hook (window.__sf) on the production build. Real-GPU frame rate and audio output are unverified. WASD pans only while nothing is selected (arrows always pan); Alt+number also assigns control groups.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 6,
+        "fidelity": 6
+      },
+      "playUrl": "./play/claude-fable-5.2-high/shardfront/",
+      "screenshotUrl": "./shots/claude-fable-5.2-high/shardfront.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-fable-5.2-high/shardfront",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-fable-5.2-high/shardfront/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-fable-5.2-high/shardfront/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-fable-5.2-high",
+      "game": "skybreak",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 134,
+      "tests": {
+        "passed": 54,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "React",
+        "Web Audio API",
+        "Vitest"
+      ],
+      "summary": "A complete single-player battle royale loop on an original procedural island: stage, skiff drop, wing-sail, loot nine weapons across five rarities, fight 23 perception-limited bots through the full Calmfield/Riftstorm schedule, win, results, requeue.",
+      "notes": "Local bot mode only: the authoritative 30 Hz match runs in the browser behind a loopback link; there is no network server, client prediction, Rapier or streaming. Verified by 54 simulation tests, headless bot soaks and automated headless-Edge play from a nested sub-path; no human played it and the synthesised audio was never listened to. Default Quick Drop is the standard ~13 minute pace; choose Blitz on the menu for a ~6 minute match. Crouch is on C as well as Left Ctrl because browsers reserve Ctrl+W.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 6,
+        "fidelity": 6
+      },
+      "playUrl": "./play/claude-fable-5.2-high/skybreak/",
+      "screenshotUrl": "./shots/claude-fable-5.2-high/skybreak.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-fable-5.2-high/skybreak",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-fable-5.2-high/skybreak/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-fable-5.2-high/skybreak/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-opus-5.5-high",
+      "game": "ashfall",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 83,
+      "tests": {
+        "passed": 109,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "React",
+        "Web Audio API",
+        "IndexedDB",
+        "Web Workers",
+        "Vitest",
+        "Playwright (screenshots)"
+      ],
+      "summary": "An original isometric ARPG slice: two full classes, a seeded tile-built wilderness and three-floor crypt, ten enemy types with elite modifiers, two multi-phase bosses, affix loot and crafting, Echo deaths, Veteran/Target Hunt replay, and IndexedDB saves — all procedural art and audio.",
+      "notes": "Balance and audio were not verified by a human or by ear; the full start-to-Engine flow is covered by simulation tests and partial headless-browser runs. Rapier/Recast/glTF were replaced by a deterministic grid sim and procedural meshes. Restarted from an empty workspace after the first attempt died on a provider error at about 28 minutes. This build is from the second, uninterrupted run.",
+      "selfScore": {
+        "playability": 6,
+        "polish": 5,
+        "fidelity": 7
+      },
+      "playUrl": "./play/claude-opus-5.5-high/ashfall/",
+      "screenshotUrl": "./shots/claude-opus-5.5-high/ashfall.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-opus-5.5-high/ashfall",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-opus-5.5-high/ashfall/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-opus-5.5-high/ashfall/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-opus-5.5-high",
+      "game": "breachline",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 368,
+      "tests": {
+        "passed": 44,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "React",
+        "Web Audio API",
+        "Vitest"
+      ],
+      "summary": "A complete offline Team Clash Practice loop on the original map Relay Station K-17: 6v6 against perception-limited bots on an authoritative 60 Hz room simulation, with nine weapons, attachments, perks, six equipment items, six Momentum support actions, a death recap, and results with XP, unlocks and Play Again.",
+      "notes": "Single-player Practice only: the online netcode and services stack (WebSocket rooms, prediction and reconciliation, matchmaking) is not built, and the menu says so. The art is procedural primitives (no external assets). The URL flag ?autostart=1&demo=1 starts an autopilot attract match.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 5,
+        "fidelity": 5
+      },
+      "playUrl": "./play/claude-opus-5.5-high/breachline/",
+      "screenshotUrl": "./shots/claude-opus-5.5-high/breachline.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-opus-5.5-high/breachline",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-opus-5.5-high/breachline/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-opus-5.5-high/breachline/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-opus-5.5-high",
+      "game": "crownfall",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 400,
+      "tests": {
+        "passed": 65,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Three.js (WebGL2)",
+        "React",
+        "Web Worker authoritative room",
+        "Web Audio",
+        "Vitest"
+      ],
+      "summary": "An original 3v3 two-lane MOBA vertical slice: draft six original heroes, then lane, jungle, contest Catalysts/Colossus and break Seals to destroy the Crown Engine against server-side bots, with an authoritative 30 Hz worker simulation and fog-filtered snapshots.",
+      "notes": "Fully offline: the 'server' is a Web Worker room in the page (same message protocol a WebSocket room would use); no human multiplayer, reconnect or real matchmaking backend. npm test takes ~100 s because it includes a full six-bot headless match. ?demo=<minutes> fast-forwards a bot-controlled match for screenshots.",
+      "selfScore": {
+        "playability": 6,
+        "polish": 6,
+        "fidelity": 5
+      },
+      "playUrl": "./play/claude-opus-5.5-high/crownfall/",
+      "screenshotUrl": "./shots/claude-opus-5.5-high/crownfall.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-opus-5.5-high/crownfall",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-opus-5.5-high/crownfall/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-opus-5.5-high/crownfall/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-opus-5.5-high",
+      "game": "farestorm",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 366,
+      "tests": {
+        "passed": 53,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "Web Audio API",
+        "IndexedDB",
+        "Vitest"
+      ],
+      "summary": "Arcade taxi game in an original procedural coastal city: pick color-coded fares, race patience timers with drifts, near misses, jumps and 18 shortcuts to build Pulse and Tailwind, across Arcade Shift, Quick Shift, Time Trial with ghosts, and a 10-lesson Skill School.",
+      "notes": "Custom deterministic raycast-wheel physics instead of Rapier and vanilla DOM UI instead of React (see report). Handling feel and audio have not been checked by a human; the screenshot comes from the built-in ?autodrive=1 demo driver. No online leaderboard or PWA.",
+      "selfScore": {
+        "playability": 6,
+        "polish": 6,
+        "fidelity": 6
+      },
+      "playUrl": "./play/claude-opus-5.5-high/farestorm/",
+      "screenshotUrl": "./shots/claude-opus-5.5-high/farestorm.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-opus-5.5-high/farestorm",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-opus-5.5-high/farestorm/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-opus-5.5-high/farestorm/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-opus-5.5-high",
+      "game": "meridian",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 376,
+      "tests": {
+        "passed": 83,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "React",
+        "Web Audio",
+        "IndexedDB",
+        "Vitest"
+      ],
+      "summary": "Original South Quay open-world slice: drive 8 vehicles through live traffic and crowds, take 4 story jobs and 3 activities, and outrun an evidence-based 5-tier Alert police system, with saves, map/GPS/phone and day-to-night — all procedural, no external assets.",
+      "notes": "Custom deterministic 2.5D physics instead of Rapier (documented). Story missions 2-4 verified via graph/runtime tests, not hand-played in a browser. Browser checks were scripted headless Edge; no interactive mouse-look playtest. npm audit flags dev-only vitest deps.",
+      "selfScore": {
+        "playability": 6,
+        "polish": 5,
+        "fidelity": 6
+      },
+      "playUrl": "./play/claude-opus-5.5-high/meridian/",
+      "screenshotUrl": "./shots/claude-opus-5.5-high/meridian.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-opus-5.5-high/meridian",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-opus-5.5-high/meridian/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-opus-5.5-high/meridian/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-opus-5.5-high",
+      "game": "protocol",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 393,
+      "tests": {
+        "passed": 52,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "React",
+        "WebAudio",
+        "Vitest",
+        "playwright-core"
+      ],
+      "summary": "A single-player 5v5 Cipher Breach vertical slice on the original map Aperture Annex: an in-browser 64 Hz authoritative room with a full economy, 12 weapons, 5 utility types, arm/disarm, halftime and overtime, perception-limited bots, a Practice range, and a match-end analysis screen.",
+      "notes": "Single-player only: the authoritative room runs in-page and there is no network transport, matchmaking or services. Bots are attacker-favoured (~65-75% of rounds). The main screenshot uses the URL-gated harness autopilot (?harness=1&autopilot=1) so a live engagement is on camera.",
+      "selfScore": {
+        "playability": 6,
+        "polish": 5,
+        "fidelity": 5
+      },
+      "playUrl": "./play/claude-opus-5.5-high/protocol/",
+      "screenshotUrl": "./shots/claude-opus-5.5-high/protocol.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-opus-5.5-high/protocol",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-opus-5.5-high/protocol/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-opus-5.5-high/protocol/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-opus-5.5-high",
+      "game": "shardfront",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 376,
+      "tests": {
+        "passed": 52,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Three.js",
+        "React",
+        "Vitest",
+        "Web Audio API",
+        "IndexedDB"
+      ],
+      "summary": "A 1v1 browser RTS slice on an original map: two complete asymmetric factions, a two-resource economy, fog of war, abilities, a fog-respecting Easy/Normal/Hard AI, a guided tutorial, post-game stats, and hash-verified replays on a deterministic 20 Hz simulation.",
+      "notes": "Real-GPU performance and the 220-unit/60 FPS benchmark were not verified; only headless software WebGL was available. One skipped test is an opt-in map-PNG debug tool. Arrow keys pan (A/S are commands). Tools: tools/screenshot.mjs, tools/playtest.mjs, ?benchmark=1. Harness nudge: the Claude Code turn ended while waiting on a background test command, before the report was written. One neutral 'continue where you left off' notice was sent, with no feedback on the game.",
+      "selfScore": {
+        "playability": 6,
+        "polish": 5,
+        "fidelity": 5
+      },
+      "playUrl": "./play/claude-opus-5.5-high/shardfront/",
+      "screenshotUrl": "./shots/claude-opus-5.5-high/shardfront.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-opus-5.5-high/shardfront",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-opus-5.5-high/shardfront/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-opus-5.5-high/shardfront/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-opus-5.5-high",
+      "game": "skybreak",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1",
+      "durationMinutes": 361,
+      "tests": {
+        "passed": 49,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "React",
+        "Web Audio",
+        "Vitest"
+      ],
+      "summary": "Single-player 24-seat no-build battle royale on an original island: staging pier, skiff drop and wing-sail glide, nine data-driven weapons in five rarities, eight items, full traversal, ten-phase Riftstorm, server-style bots, spectating and results, all driven by a deterministic in-browser 30Hz authoritative simulation.",
+      "notes": "No backend: the authoritative match runs in-process behind a LocalTransport, so there is no real networking, prediction or lag compensation. The screenshot is a real production-build frame captured with ?autoplay (the bot AI drives the player's seat, because headless browsers cannot use pointer lock). Not hand-tested with a mouse; real-GPU performance not measured.",
+      "selfScore": {
+        "playability": 6,
+        "polish": 5,
+        "fidelity": 5
+      },
+      "playUrl": "./play/claude-opus-5.5-high/skybreak/",
+      "screenshotUrl": "./shots/claude-opus-5.5-high/skybreak.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-opus-5.5-high/skybreak",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-opus-5.5-high/skybreak/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-opus-5.5-high/skybreak/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-sonnet-5.5-high",
+      "game": "ashfall",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1.1",
+      "durationMinutes": 89,
+      "tests": {
+        "passed": 60,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Three.js",
+        "Vitest",
+        "Web Audio API",
+        "IndexedDB"
+      ],
+      "summary": "A playable isometric action-RPG slice: two classes, a seeded wilderness, a three-floor crypt, two multi-phase bosses, affix loot with identify/salvage/reroll/sockets, quests, Normal/Veteran, Target Hunt and checksummed IndexedDB saves, all procedural and tested end to end.",
+      "notes": "Verified only through headless software-rendered Chrome, scripted input and bots; real-GPU frame rate, audio by ear and a hand-played full session were not verified. Stack deviates from the brief (three.js, vanilla DOM, grid collision) - see ONESHOT-REPORT.md. Dev helper URL params: ?autostart=cinder|ranger and &bench=1. Restarted from an empty workspace after the first attempt died on a provider error. This build is from the second, uninterrupted run.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 6,
+        "fidelity": 6
+      },
+      "playUrl": "./play/claude-sonnet-5.5-high/ashfall/",
+      "screenshotUrl": "./shots/claude-sonnet-5.5-high/ashfall.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-sonnet-5.5-high/ashfall",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-sonnet-5.5-high/ashfall/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-sonnet-5.5-high/ashfall/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-sonnet-5.5-high",
+      "game": "breachline",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1.1",
+      "durationMinutes": 108,
+      "tests": {
+        "passed": 58,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "React",
+        "Web Audio",
+        "Vitest"
+      ],
+      "summary": "Offline 6v6 Team Clash FPS on an original mirrored island map with nine weapons, equipment, Momentum support actions, simulation-driven bots, loadouts, XP and a full match-to-results loop.",
+      "notes": "Practice only: no online multiplayer, netcode or backend. Verified in software-rendered headless Chromium only; real GPU performance and real Pointer Lock were not verified. Automation hooks live on window.__breachline.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 5,
+        "fidelity": 4
+      },
+      "playUrl": "./play/claude-sonnet-5.5-high/breachline/",
+      "screenshotUrl": "./shots/claude-sonnet-5.5-high/breachline.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-sonnet-5.5-high/breachline",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-sonnet-5.5-high/breachline/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-sonnet-5.5-high/breachline/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-sonnet-5.5-high",
+      "game": "crownfall",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1.1",
+      "durationMinutes": 149,
+      "tests": {
+        "passed": 47,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Three.js",
+        "Vitest",
+        "Web Audio"
+      ],
+      "summary": "A playable single-player 3v3 MOBA slice: draft one of six original heroes, then play a full match against bots on a symmetric two-lane map with jungle, fog and wards, 32 items, Seals/Cores/Crown Engine, Twin Catalysts and the Aether Colossus, ending in a results screen.",
+      "notes": "Single-player only: the authoritative 30 Hz simulation runs in the browser behind a command/event protocol; no networking, matchmaking or reconnect. Real-GPU performance and audio were not verified (headless/software rendering only). Camera pans with arrow keys/edge scroll/middle-drag because WASD are ability keys; camera lock is on by default (Y toggles). Bot-only matches take about 20-33 minutes. Restarted from an empty workspace after the first attempt was cancelled by the provider. This build is from the second, uninterrupted run.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 7,
+        "fidelity": 5
+      },
+      "playUrl": "./play/claude-sonnet-5.5-high/crownfall/",
+      "screenshotUrl": "./shots/claude-sonnet-5.5-high/crownfall.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-sonnet-5.5-high/crownfall",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-sonnet-5.5-high/crownfall/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-sonnet-5.5-high/crownfall/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-sonnet-5.5-high",
+      "game": "farestorm",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1.1",
+      "durationMinutes": 57,
+      "tests": {
+        "passed": 61,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Three.js",
+        "Vitest",
+        "Web Audio API"
+      ],
+      "summary": "A playable Farestorm vertical slice: drive one of three storm cabs around the procedural coastal city of Galeport, pick up and deliver passengers against a shift clock, chain drifts/near-misses/shortcuts into Pulse tips, and finish with a ranked results screen in Arcade, Quick or Time Trial mode.",
+      "notes": "No external assets; everything is procedural. Skill School, ghosts, leaderboard, Rapier/Babylon and key remapping are not built. Real-GPU frame rate and audio were not verified (headless software GL only). ?bot=1 and ?autostart=... are verification aids, not game features.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 7,
+        "fidelity": 5
+      },
+      "playUrl": "./play/claude-sonnet-5.5-high/farestorm/",
+      "screenshotUrl": "./shots/claude-sonnet-5.5-high/farestorm.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-sonnet-5.5-high/farestorm",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-sonnet-5.5-high/farestorm/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-sonnet-5.5-high/farestorm/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-sonnet-5.5-high",
+      "game": "meridian",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1.1",
+      "durationMinutes": 106,
+      "tests": {
+        "passed": 60,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Babylon.js",
+        "Vitest",
+        "Web Audio"
+      ],
+      "summary": "A playable South Quay slice: procedural city with signal-obeying traffic and pedestrians, eight driveable vehicles, hitscan combat, a witness-driven five-tier police system, a data-driven mission graph (First Shift, Hot Cargo, courier/circuit/recovery activities), shops, map/GPS, journaled saves and a day-to-rainy-night cycle.",
+      "notes": "Two of four story missions only; no interiors, streaming or Rapier. Frame rate unverified on real GPUs (only software-rendered headless Chrome was available). Single ~6 MB JS chunk. Harness nudge: the Claude Code turn ended while waiting on a background build. One neutral 'continue where you left off' notice was sent, with no feedback on the game.",
+      "selfScore": {
+        "playability": 6,
+        "polish": 6,
+        "fidelity": 5
+      },
+      "playUrl": "./play/claude-sonnet-5.5-high/meridian/",
+      "screenshotUrl": "./shots/claude-sonnet-5.5-high/meridian.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-sonnet-5.5-high/meridian",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-sonnet-5.5-high/meridian/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-sonnet-5.5-high/meridian/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-sonnet-5.5-high",
+      "game": "protocol",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1.1",
+      "durationMinutes": 101,
+      "tests": {
+        "passed": 59,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "three.js",
+        "Vitest",
+        "Web Audio"
+      ],
+      "summary": "A playable single-player Cipher Breach slice on the original Aperture Annex map: full buy/arm/defend/disarm round loop, economy, halftime and overtime, 12 weapons, 5 utilities, fog-of-war bots, and an authoritative 64 Hz room behind a validated protocol with prediction and lag compensation.",
+      "notes": "Single human seat vs bots, no backend. three.js and DOM UI replace Babylon/React/Rapier/Colyseus. Screenshots rendered with software WebGL in headless Edge (real GPU fps and audio unverified). Dev URL ?dev=1&start=1&autoplay=1 drives the player seat with the bot brain.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 5,
+        "fidelity": 6
+      },
+      "playUrl": "./play/claude-sonnet-5.5-high/protocol/",
+      "screenshotUrl": "./shots/claude-sonnet-5.5-high/protocol.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-sonnet-5.5-high/protocol",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-sonnet-5.5-high/protocol/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-sonnet-5.5-high/protocol/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-sonnet-5.5-high",
+      "game": "shardfront",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1.1",
+      "durationMinutes": 110,
+      "tests": {
+        "passed": 35,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Three.js (WebGL 2)",
+        "Vitest",
+        "Web Audio API"
+      ],
+      "summary": "A playable 1v1 RTS slice on a hand-built symmetric map: two asymmetric factions, economy/supply/tech/fog of war, a fog-obeying utility AI with three levels, tutorial, replays with hash verification and post-game stats.",
+      "notes": "Procedural assets only. HUD is vanilla DOM (not React); navigation runs on the main thread (no workers); WebGPU path, occlusion fade, LODs and online play are not implemented. Performance on a real GPU is unverified (only software-rendered headless Edge was available). Restarted from an empty workspace after the first attempt died on a provider error. This build is from the second, uninterrupted run.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 6,
+        "fidelity": 6
+      },
+      "playUrl": "./play/claude-sonnet-5.5-high/shardfront/",
+      "screenshotUrl": "./shots/claude-sonnet-5.5-high/shardfront.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-sonnet-5.5-high/shardfront",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-sonnet-5.5-high/shardfront/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-sonnet-5.5-high/shardfront/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    },
+    {
+      "model": "claude-sonnet-5.5-high",
+      "game": "skybreak",
+      "status": "complete",
+      "purity": "one-shot",
+      "date": "2026-11-11",
+      "harnessVersion": "v1.1",
+      "durationMinutes": 96,
+      "tests": {
+        "passed": 68,
+        "failed": 0
+      },
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "three.js",
+        "Vitest",
+        "Web Audio"
+      ],
+      "summary": "A complete single-player 24-seat battle royale loop (staging, skiff, glide, loot, fight bots, shrinking storm, results, requeue) on a procedural 1.2 km island, with a headless-tested authoritative simulation and a Practice Range.",
+      "notes": "Runs fully locally (no server): the authoritative 30 Hz simulation is hosted in the tab, so networking, prediction, services, Rapier/Babylon/React from the brief are not built. Verified with headless Chrome (software WebGL) against the production build served from a sub-path; real-GPU performance and real pointer-lock feel were not measured.",
+      "selfScore": {
+        "playability": 7,
+        "polish": 6,
+        "fidelity": 5
+      },
+      "playUrl": "./play/claude-sonnet-5.5-high/skybreak/",
+      "screenshotUrl": "./shots/claude-sonnet-5.5-high/skybreak.png",
+      "sourceUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/tree/main/builds/claude-sonnet-5.5-high/skybreak",
+      "readmeUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-sonnet-5.5-high/skybreak/README.md",
+      "reportUrl": "https://github.com/JamesTsetsekas/oneshot-arcade/blob/main/builds/claude-sonnet-5.5-high/skybreak/ONESHOT-REPORT.md",
+      "verificationUrl": null
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+export{Yn as particlesVertexShader}from"./session-CPKDxFhx.js";

@@ -1,0 +1,1 @@
+export{yn as gaussianSplattingVertexDeclarationWGSL}from"./session-CPKDxFhx.js";

@@ -1,0 +1,1 @@
+export{lr as lightProxyPixelShader}from"./app--j10jIDz.js";

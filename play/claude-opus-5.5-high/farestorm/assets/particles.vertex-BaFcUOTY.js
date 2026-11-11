@@ -1,0 +1,1 @@
+export{Yn as particlesVertexShader}from"./app--j10jIDz.js";
