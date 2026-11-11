@@ -1,0 +1,25 @@
+// Final gameplay screenshot from the production build served under a sub-path.
+import { chromium } from 'playwright-core';
+const url = process.argv[2] || 'http://localhost:5561/play/claude-sonnet-5.5-high/meridian/';
+const browser = await chromium.launch({ channel: 'chrome', headless: true, args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--no-sandbox'] });
+const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+const logs = [];
+page.on('console', (m) => { if (m.type() === 'error') logs.push(m.text()); });
+page.on('pageerror', (e) => logs.push('pageerror ' + e.message));
+await page.goto(url, { waitUntil: 'load' });
+await page.waitForFunction(() => window.__meridian, null, { timeout: 90000 });
+await page.waitForTimeout(2500);
+await page.screenshot({ path: 'oneshot/menu.png' });
+await page.evaluate(() => window.__meridian.startNew());
+await page.waitForTimeout(2000);
+await page.evaluate(() => { const g = window.__meridian.game; g.hour = 17.6; const v = g.vehicles.find((q) => q.tag === 'kestrel'); const h = g.player.human; h.x = v.x - 1.5; h.z = v.z; });
+await page.waitForTimeout(400);
+await page.keyboard.press('KeyE');
+await page.waitForTimeout(1200);
+await page.keyboard.down('KeyW');
+await page.waitForTimeout(5000);
+await page.screenshot({ path: 'oneshot/screenshot.png' });
+await page.keyboard.up('KeyW');
+const info = await page.evaluate(() => { const g = window.__meridian.game; return { inVeh: !!g.playerVehicle(), t: g.t.toFixed(1), traffic: g.traffic.count(), peds: g.humans.filter((h) => h.kind === 'ped').length, mission: g.missions.def?.id, loc: location.href }; });
+console.log(JSON.stringify(info), 'errors:', JSON.stringify(logs));
+await browser.close();

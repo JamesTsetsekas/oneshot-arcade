@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "game": "meridian",
+  "model": "claude-sonnet-5.5-high",
+  "status": "complete",
+  "harnessVersion": "v1.1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T15:42:40Z",
+  "finishedAt": "2026-11-11T17:28:51Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 60,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Babylon.js",
+    "Vitest",
+    "Web Audio"
+  ],
+  "summary": "A playable South Quay slice: procedural city with signal-obeying traffic and pedestrians, eight driveable vehicles, hitscan combat, a witness-driven five-tier police system, a data-driven mission graph (First Shift, Hot Cargo, courier/circuit/recovery activities), shops, map/GPS, journaled saves and a day-to-rainy-night cycle.",
+  "selfScore": {
+    "playability": 6,
+    "polish": 6,
+    "fidelity": 5
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Two of four story missions only; no interiors, streaming or Rapier. Frame rate unverified on real GPUs (only software-rendered headless Chrome was available). Single ~6 MB JS chunk. Harness nudge: the Claude Code turn ended while waiting on a background build. One neutral 'continue where you left off' notice was sent, with no feedback on the game.",
+  "purity": "one-shot",
+  "durationMinutes": 106
+}

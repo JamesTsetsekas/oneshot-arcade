@@ -1,0 +1,34 @@
+// Scripted scenario capture: walk, mount the bike, ride, screenshot.
+import { chromium } from 'playwright-core';
+import fs from 'node:fs';
+const url = process.argv[2] || 'http://localhost:5560/';
+const out = process.argv[3] || 'oneshot';
+fs.mkdirSync(out, { recursive: true });
+const browser = await chromium.launch({ channel: 'chrome', headless: true, args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--no-sandbox'] });
+const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+const logs = [];
+page.on('console', (m) => logs.push(`[${m.type()}] ${m.text()}`));
+page.on('pageerror', (e) => logs.push('[pageerror] ' + e.message));
+await page.goto(url, { waitUntil: 'load' });
+await page.waitForFunction(() => window.__meridian, null, { timeout: 60000 });
+await page.waitForTimeout(1500);
+await page.evaluate(() => window.__meridian.startNew());
+await page.waitForTimeout(6000);
+await page.screenshot({ path: `${out}/s1-onfoot.png` });
+// walk to bike
+const bike = await page.evaluate(() => { const g = window.__meridian.game; const v = g.vehicles.find((q) => q.tag === 'kestrel'); const h = g.player.human; h.x = v.x - 1.5; h.z = v.z; return [v.x, v.z]; });
+await page.waitForTimeout(500);
+await page.keyboard.press('KeyE');
+await page.waitForTimeout(1500);
+await page.keyboard.down('KeyW');
+await page.waitForTimeout(3500);
+await page.screenshot({ path: `${out}/s2-bike.png` });
+await page.keyboard.down('KeyD');
+await page.waitForTimeout(1200);
+await page.keyboard.up('KeyD');
+await page.waitForTimeout(2500);
+await page.screenshot({ path: `${out}/s3-bike2.png` });
+const info = await page.evaluate(() => { const g = window.__meridian.game; const pv = g.playerVehicle(); return { inVeh: !!pv, speed: pv?.speed, pos: [g.player.human.x, g.player.human.z], obj: g.missionObjective.text, traffic: g.traffic.count(), fps: window.__meridian.renderer.stats.fps, draw: window.__meridian.renderer.scene.getActiveMeshes().length }; });
+console.log(JSON.stringify(info));
+console.log(logs.slice(0, 30).join('\n'));
+await browser.close();

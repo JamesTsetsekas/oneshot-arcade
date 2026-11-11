@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f3b3f" />
+    <title>Meridian Run</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="game" tabindex="0"></canvas>
+      <div id="hud" class="hidden"></div>
+      <div id="overlay"></div>
+      <div id="boot">
+        <div class="boot-card">
+          <div class="boot-logo">MERIDIAN RUN</div>
+          <div class="boot-sub" id="boot-msg">Loading South Quay...</div>
+          <div class="boot-bar"><div id="boot-fill"></div></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
