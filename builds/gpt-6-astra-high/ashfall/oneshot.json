@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "game": "ashfall",
+  "model": "gpt-6-astra-high",
+  "status": "complete",
+  "purity": "iterated",
+  "harnessVersion": "pre-harness",
+  "date": "2026-09-28",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "astra-final-world.png",
+  "tests": {
+    "passed": 15,
+    "failed": 0
+  },
+  "readme": "README.md",
+  "verification": "docs/ASTRA-VERIFICATION.md",
+  "notes": "Remade in a second pass after an earlier attempt."
+}

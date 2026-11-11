@@ -1,0 +1,10 @@
+{
+  "$comment": "Model + harness + effort combinations. The id is the folder name under builds/. Order controls dashboard column order.",
+  "models": [
+    { "id": "gpt-6-astra-high", "label": "GPT-6 Astra", "vendor": "OpenAI", "model": "gpt-6-astra", "harness": "Codex", "effort": "high", "color": "#4fb8a6" },
+    { "id": "gpt-6.1-sol-high", "label": "GPT-6.1 Sol", "vendor": "OpenAI", "model": "gpt-6.1-sol", "harness": "Codex", "effort": "high", "color": "#e0a84a" },
+    { "id": "claude-fable-5.2-high", "label": "Fable 5.2", "vendor": "Anthropic", "model": "claude-fable-5-2", "harness": "Claude Code", "effort": "high", "color": "#d77757" },
+    { "id": "claude-opus-5.5-high", "label": "Opus 5.5", "vendor": "Anthropic", "model": "claude-opus-5-5", "harness": "Claude Code", "effort": "high", "color": "#9c84e0" },
+    { "id": "claude-sonnet-5.5-high", "label": "Sonnet 5.5", "vendor": "Anthropic", "model": "claude-sonnet-5-5", "harness": "Claude Code", "effort": "high", "color": "#6f9be8" }
+  ]
+}

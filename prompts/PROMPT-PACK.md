@@ -2,20 +2,20 @@
 
 Eight self-contained, implementation-ready prompts are included. Each defines an original game that captures genre-level design strengths without reproducing protected names, characters, maps, art, audio, story, or other proprietary expression.
 
-## Play the Astra builds
+## How this pack is used
 
-The implemented games are separate projects in this folder. Run `node outputs/arcade/serve.mjs` from the workspace to open the local collection at `http://127.0.0.1:4160`. See [the collection guide](GAME-COLLECTION.md) for individual games, startup instructions, verification evidence, and documented scope limits. The original prompt pack below is preserved.
+Oneshot Arcade gives each brief below to a model, verbatim and inside the shared [one-shot harness](ONESHOT-HARNESS.md). The resulting builds are under `builds/<model>/<game>/` and can be compared side by side in the arcade dashboard. The original prompt pack is preserved below.
 
 ## Prompt Files
 
-1. [Shardfront — Browser Competitive RTS](01-shardfront-browser-rts-prompt.md)
-2. [Ashfall Covenant — Browser Action RPG](02-ashfall-covenant-browser-arpg-prompt.md)
-3. [Breachline — Browser Arcade Military FPS](03-breachline-browser-arcade-fps-prompt.md)
-4. [Last Protocol — Browser Competitive Tactical FPS](04-last-protocol-browser-tactical-fps-prompt.md)
-5. [Crownfall — Browser Lane-and-Objective MOBA](05-crownfall-browser-moba-prompt.md)
-6. [Skybreak — Browser No-Build Battle Royale](06-skybreak-browser-battle-royale-prompt.md)
-7. [Meridian Run — Browser Open-World Urban Action Game](07-meridian-run-browser-open-world-prompt.md)
-8. [Farestorm — Browser Arcade Taxi Driving Game](08-farestorm-browser-arcade-driving-prompt.md)
+1. [Shardfront — Browser Competitive RTS](games/01-shardfront-browser-rts.md)
+2. [Ashfall Covenant — Browser Action RPG](games/02-ashfall-covenant-browser-arpg.md)
+3. [Breachline — Browser Arcade Military FPS](games/03-breachline-browser-arcade-fps.md)
+4. [Last Protocol — Browser Competitive Tactical FPS](games/04-last-protocol-browser-tactical-fps.md)
+5. [Crownfall — Browser Lane-and-Objective MOBA](games/05-crownfall-browser-moba.md)
+6. [Skybreak — Browser No-Build Battle Royale](games/06-skybreak-browser-battle-royale.md)
+7. [Meridian Run — Browser Open-World Urban Action Game](games/07-meridian-run-browser-open-world.md)
+8. [Farestorm — Browser Arcade Taxi Driving Game](games/08-farestorm-browser-arcade-driving.md)
 
 ## Recommended Use
 

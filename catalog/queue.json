@@ -1,0 +1,53 @@
+{
+  "$comment": "Runs in flight. A finished build in builds/ always wins over an entry here; remove entries once imported.",
+  "runs": [
+    {
+      "model": "gpt-6.1-sol-high",
+      "game": "shardfront",
+      "status": "running",
+      "started": "2026-11-11"
+    },
+    {
+      "model": "gpt-6.1-sol-high",
+      "game": "ashfall",
+      "status": "running",
+      "started": "2026-11-11"
+    },
+    {
+      "model": "gpt-6.1-sol-high",
+      "game": "breachline",
+      "status": "running",
+      "started": "2026-11-11"
+    },
+    {
+      "model": "gpt-6.1-sol-high",
+      "game": "protocol",
+      "status": "running",
+      "started": "2026-11-11"
+    },
+    {
+      "model": "gpt-6.1-sol-high",
+      "game": "crownfall",
+      "status": "running",
+      "started": "2026-11-11"
+    },
+    {
+      "model": "gpt-6.1-sol-high",
+      "game": "skybreak",
+      "status": "running",
+      "started": "2026-11-11"
+    },
+    {
+      "model": "gpt-6.1-sol-high",
+      "game": "meridian",
+      "status": "running",
+      "started": "2026-11-11"
+    },
+    {
+      "model": "gpt-6.1-sol-high",
+      "game": "farestorm",
+      "status": "running",
+      "started": "2026-11-11"
+    }
+  ]
+}

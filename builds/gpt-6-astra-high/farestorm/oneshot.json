@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "game": "farestorm",
+  "model": "gpt-6-astra-high",
+  "status": "complete",
+  "purity": "iterated",
+  "harnessVersion": "pre-harness",
+  "date": "2026-09-28",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "docs/final-gameplay.png",
+  "tests": {
+    "passed": 30,
+    "failed": 0
+  },
+  "readme": "README.md",
+  "verification": "docs/verification.md",
+  "notes": "An earlier approved build was kept rather than regenerated."
+}
