@@ -34,7 +34,7 @@ fs.rmSync(workspace, { recursive: true, force: true });
 fs.mkdirSync(path.join(workspace, "oneshot"), { recursive: true });
 
 const harnessFile = fs.readFileSync(path.join(root, "prompts", "ONESHOT-HARNESS.md"), "utf8");
-const version = harnessFile.match(/^# Oneshot Arcade harness (v\d+)/m)?.[1] ?? "v?";
+const version = harnessFile.match(/^# Oneshot Arcade harness (v[\d.]+)/m)?.[1] ?? "v?";
 const template = harnessFile.split(/\n---\n/).slice(1).join("\n---\n").trim();
 const port = 5100 + models.indexOf(model) * 100 + games.indexOf(game) * 10;
 const values = {
