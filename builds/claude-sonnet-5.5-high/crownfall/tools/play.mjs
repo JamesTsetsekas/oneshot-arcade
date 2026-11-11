@@ -1,0 +1,65 @@
+// Drives the production build like a player: draft -> lock -> match; steps the sim, casts, shops; captures screenshots.
+import { chromium } from 'playwright-core';
+import { serve } from './serve.mjs';
+import fs from 'node:fs';
+
+const PORT = 5543, PREFIX = '/play/claude-sonnet-5.5-high/crownfall/';
+const server = serve(PORT, PREFIX);
+const exe = ['C:/Program Files/Google/Chrome/Application/chrome.exe', 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'].find((p) => fs.existsSync(p));
+const browser = await chromium.launch({ executablePath: exe, headless: true, args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
+const W = Number(process.env.W ?? 1600), H = Number(process.env.H ?? 900);
+const page = await browser.newPage({ viewport: { width: W, height: H } });
+const logs = [];
+page.on('console', (m) => { if (['error', 'warning'].includes(m.type())) logs.push(`[${m.type()}] ${m.text()}`); });
+page.on('pageerror', (e) => logs.push(`[pageerror] ${e.message}\n${e.stack}`));
+await page.goto(`http://127.0.0.1:${PORT}${PREFIX}`);
+await page.waitForTimeout(1500);
+fs.mkdirSync('oneshot', { recursive: true });
+await page.click('text=Play');
+await page.waitForTimeout(800);
+const hero = process.env.HERO ?? 'Suri Vale';
+await page.click(`.d-card:has-text("${hero}")`);
+await page.waitForTimeout(300);
+await page.click('text=Lock In');
+await page.waitForTimeout(4200);
+const info = () => page.evaluate(() => { const a = window.__crownfall; const s = a.match?.sim; if (!s) return null; const p = s.player; return { t: s.time.toFixed(1), x: p.x.toFixed(1), z: p.z.toFixed(1), hp: Math.round(p.hp), gold: Math.round(p.hero.gold), lvl: p.hero.level, units: s.units.length, kills: s.teams.map((t) => t.kills) }; });
+console.log('match start', await info());
+await page.screenshot({ path: 'oneshot/start.png' });
+// buy items via the shop UI
+await page.click('.card:has-text("Whetstone")').catch(() => {});
+await page.dblclick('.card:has-text("Whetstone")').catch(() => {});
+await page.waitForTimeout(300);
+await page.screenshot({ path: 'oneshot/shop.png' });
+await page.keyboard.press('Escape');
+await page.waitForTimeout(200);
+// learn skill, then walk to the lane and step time forward
+await page.keyboard.press('Control+q');
+const run = (ticks) => page.evaluate((n) => { const s = window.__crownfall.match.sim; for (let i = 0; i < n; i++) s.step(); }, ticks);
+const cmd = (c) => page.evaluate((c) => { const a = window.__crownfall; a.match.sim.command({ ...c, slot: a.match.sim.playerSlot }); }, c);
+await cmd({ c: 'move', x: -34, z: -33 });
+await run(30 * 45);
+console.log('after walk', await info());
+await cmd({ c: 'move', x: -22, z: -36 });
+await run(30 * 50);
+await page.mouse.move(W * 0.62, H * 0.38);
+await page.waitForTimeout(500);
+await page.screenshot({ path: 'oneshot/lane.png' });
+console.log('lane', await info());
+// attack-move and cast
+await page.keyboard.down('q');
+await page.waitForTimeout(150);
+await page.screenshot({ path: 'oneshot/aim.png' });
+await page.keyboard.up('q');
+await page.waitForTimeout(300);
+await cmd({ c: 'amove', x: 0, z: -36 });
+await run(30 * 20);
+await page.waitForTimeout(500);
+await page.screenshot({ path: 'oneshot/fight.png' });
+console.log('fight', await info());
+await page.keyboard.down('Tab');
+await page.waitForTimeout(300);
+await page.screenshot({ path: 'oneshot/scoreboard.png' });
+await page.keyboard.up('Tab');
+console.log(logs.slice(0, 20).join('\n') || 'no console errors');
+await browser.close();
+server.close();

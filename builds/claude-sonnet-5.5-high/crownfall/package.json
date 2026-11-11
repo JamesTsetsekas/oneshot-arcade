@@ -1,0 +1,29 @@
+{
+  "name": "crownfall",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Crownfall - a browser lane-and-objective MOBA (vertical slice)",
+  "scripts": {
+    "dev": "vite --port 5540 --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 5541 --host 127.0.0.1",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "sim:batch": "vite-node tools/batch.ts",
+    "sim:fairness": "vite-node tools/mirror.ts"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.170.0",
+    "playwright-core": "^1.65.0",
+    "typescript": "5.6",
+    "vite": "^6.4.6",
+    "vitest": "^2.1.9"
+  }
+}

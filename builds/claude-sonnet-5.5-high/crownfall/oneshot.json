@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "game": "crownfall",
+  "model": "claude-sonnet-5.5-high",
+  "status": "complete",
+  "harnessVersion": "v1.1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T17:16:32Z",
+  "finishedAt": "2026-11-11T19:45:26Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 47,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Three.js",
+    "Vitest",
+    "Web Audio"
+  ],
+  "summary": "A playable single-player 3v3 MOBA slice: draft one of six original heroes, then play a full match against bots on a symmetric two-lane map with jungle, fog and wards, 32 items, Seals/Cores/Crown Engine, Twin Catalysts and the Aether Colossus, ending in a results screen.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 7,
+    "fidelity": 5
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Single-player only: the authoritative 30 Hz simulation runs in the browser behind a command/event protocol; no networking, matchmaking or reconnect. Real-GPU performance and audio were not verified (headless/software rendering only). Camera pans with arrow keys/edge scroll/middle-drag because WASD are ability keys; camera lock is on by default (Y toggles). Bot-only matches take about 20-33 minutes. Restarted from an empty workspace after the first attempt was cancelled by the provider. This build is from the second, uninterrupted run.",
+  "purity": "one-shot",
+  "durationMinutes": 149
+}
