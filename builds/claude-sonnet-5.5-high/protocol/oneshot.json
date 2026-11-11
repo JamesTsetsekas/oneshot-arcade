@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "game": "protocol",
+  "model": "claude-sonnet-5.5-high",
+  "status": "complete",
+  "harnessVersion": "v1.1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T15:42:33Z",
+  "finishedAt": "2026-11-11T17:23:05Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 59,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "three.js",
+    "Vitest",
+    "Web Audio"
+  ],
+  "summary": "A playable single-player Cipher Breach slice on the original Aperture Annex map: full buy/arm/defend/disarm round loop, economy, halftime and overtime, 12 weapons, 5 utilities, fog-of-war bots, and an authoritative 64 Hz room behind a validated protocol with prediction and lag compensation.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 5,
+    "fidelity": 6
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Single human seat vs bots, no backend. three.js and DOM UI replace Babylon/React/Rapier/Colyseus. Screenshots rendered with software WebGL in headless Edge (real GPU fps and audio unverified). Dev URL ?dev=1&start=1&autoplay=1 drives the player seat with the bot brain.",
+  "purity": "one-shot",
+  "durationMinutes": 101
+}
