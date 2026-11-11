@@ -1,0 +1,37 @@
+{
+  "name": "skybreak",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Skybreak - an original browser battle royale vertical slice (Oneshot Arcade)",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --port 5350 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 5350 --strictPort",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "soak": "tsx tools/soak.ts",
+    "loot-report": "tsx tools/lootReport.ts",
+    "storm-seeds": "tsx tools/stormSeeds.ts",
+    "screenshot": "node tools/screenshot.mjs",
+    "island-stats": "tsx tools/islandStats.ts"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^9.35.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "playwright-core": "^1.65.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  }
+}

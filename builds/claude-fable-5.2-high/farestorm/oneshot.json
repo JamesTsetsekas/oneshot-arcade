@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "game": "farestorm",
+  "model": "claude-fable-5.2-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T06:46:08Z",
+  "finishedAt": "2026-11-11T08:19:23Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 42,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Babylon.js",
+    "Rapier 3D (WASM)",
+    "React",
+    "Web Audio",
+    "IndexedDB",
+    "Vitest"
+  ],
+  "summary": "An original arcade taxi slice: three raycast-wheel storm cabs, a procedural six-district coastal city with 32 destinations and 18 shortcuts, signal-obeying traffic, and a full fare loop with Pulse style chains, Tailwind boost, four modes, results and local records.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 7,
+    "fidelity": 6
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Never played by a human: handling and balance were tuned from headless telemetry, an autopilot and screenshots. All art, audio and maps are generated in code. JS bundle is 11 MB (3.2 MB gzip). Gamepad, audio-by-ear and non-Chromium browsers are unverified. No ghosts, leaderboard or PWA cache.",
+  "purity": "one-shot",
+  "durationMinutes": 93
+}

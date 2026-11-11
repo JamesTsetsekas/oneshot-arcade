@@ -1,0 +1,37 @@
+{
+  "name": "farestorm",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Farestorm - an original browser arcade taxi game set in the coastal city of Galeport.",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "vite --port 5370 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 5371 --strictPort",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "screenshot": "node tools/screenshot.mjs",
+    "telemetry": "vitest run tests/vehicle.test.ts --disable-console-intercept"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^9.35.0",
+    "@dimforge/rapier3d-compat": "^0.21.0",
+    "@fontsource/lilita-one": "^5.3.0",
+    "@fontsource/rubik": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "playwright-core": "^1.65.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  }
+}

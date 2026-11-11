@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "game": "skybreak",
+  "model": "claude-fable-5.2-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T06:46:02Z",
+  "finishedAt": "2026-11-11T09:00:05Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 54,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Babylon.js",
+    "React",
+    "Web Audio API",
+    "Vitest"
+  ],
+  "summary": "A complete single-player battle royale loop on an original procedural island: stage, skiff drop, wing-sail, loot nine weapons across five rarities, fight 23 perception-limited bots through the full Calmfield/Riftstorm schedule, win, results, requeue.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 6,
+    "fidelity": 6
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Local bot mode only: the authoritative 30 Hz match runs in the browser behind a loopback link; there is no network server, client prediction, Rapier or streaming. Verified by 54 simulation tests, headless bot soaks and automated headless-Edge play from a nested sub-path; no human played it and the synthesised audio was never listened to. Default Quick Drop is the standard ~13 minute pace; choose Blitz on the menu for a ~6 minute match. Crouch is on C as well as Left Ctrl because browsers reserve Ctrl+W.",
+  "purity": "one-shot",
+  "durationMinutes": 134
+}

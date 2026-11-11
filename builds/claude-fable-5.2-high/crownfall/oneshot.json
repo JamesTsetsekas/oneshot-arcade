@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "game": "crownfall",
+  "model": "claude-fable-5.2-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T06:45:58Z",
+  "finishedAt": "2026-11-11T08:40:41Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 83,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Three.js",
+    "React",
+    "Web Worker",
+    "Web Audio API",
+    "Vitest",
+    "Playwright (dev tooling)"
+  ],
+  "summary": "A single-player 3v3 MOBA vertical slice: six original heroes, 32 items, fog of war, jungle and objectives, and full Seal/Core Tower/Crown Engine rules on a two-lane sky-island, simulated authoritatively at 30 Hz in a Web Worker and played with two allied bots against three enemy bots.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 6,
+    "fidelity": 6
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Single-player only: the authoritative simulation runs in a Web Worker in the page; there is no network server, matchmaking or multiplayer. All art, icons and audio are procedural (no imported assets). Verified only in headless Microsoft Edge via scripts (83 sim tests, 29 real-input browser checks including a full match); never played by a human, audio never heard. The ?autostart=<hero> URL parameter and window.__crownfall debug handle exist for the screenshot/playtest tools in tools/.",
+  "purity": "one-shot",
+  "durationMinutes": 115
+}

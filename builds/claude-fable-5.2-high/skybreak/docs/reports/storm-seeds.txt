@@ -1,0 +1,68 @@
+valid final-field centres authored + validated: 80
+
+seed 9000: nested=true
+  P0 r430 (54,-73) land 99%
+  P1 r320 (116,-157) land 100%
+  P2 r210 (181,-188) land 100%
+  P3 r125 (124,-233) land 100%
+  P4 r70 (94,-264) land 100%
+  P5 r35 (110,-245) land 100%
+  endgame legs (106,-229) -> (110,-245) -> (131,-198)
+seed 9977: nested=true
+  P0 r430 (78,23) land 97%
+  P1 r320 (178,53) land 96%
+  P2 r210 (215,65) land 97%
+  P3 r125 (280,101) land 96%
+  P4 r70 (290,107) land 100%
+  P5 r35 (311,123) land 100%
+  endgame legs (352,100) -> (391,64) -> (358,84)
+seed 10954: nested=true
+  P0 r430 (198,-54) land 85%
+  P1 r320 (299,-81) land 85%
+  P2 r210 (297,-89) land 99%
+  P3 r125 (272,-86) land 100%
+  P4 r70 (292,-121) land 100%
+  P5 r35 (318,-106) land 100%
+  endgame legs (287,-52) -> (318,-106) -> (308,-69)
+seed 11931: nested=true
+  P0 r430 (-32,90) land 94%
+  P1 r320 (-68,188) land 96%
+  P2 r210 (-12,266) land 99%
+  P3 r125 (-10,321) land 100%
+  P4 r70 (37,310) land 100%
+  P5 r35 (21,312) land 100%
+  endgame legs (53,338) -> (-2,311) -> (51,322)
+seed 12908: nested=true
+  P0 r430 (-2,-9) land 99%
+  P1 r320 (-30,-110) land 100%
+  P2 r210 (-110,-145) land 100%
+  P3 r125 (-181,-150) land 100%
+  P4 r70 (-185,-131) land 100%
+  P5 r35 (-216,-127) land 100%
+  endgame legs (-249,-121) -> (-209,-117) -> (-216,-127)
+seed 13885: nested=true
+  P0 r430 (-25,-213) land 86%
+  P1 r320 (-38,-317) land 86%
+  P2 r210 (-16,-353) land 96%
+  P3 r125 (-49,-362) land 100%
+  P4 r70 (-47,-410) land 100%
+  P5 r35 (-48,-427) land 100%
+  endgame legs (-66,-424) -> (-48,-427) -> (-66,-424)
+seed 14862: nested=true
+  P0 r430 (4,72) land 94%
+  P1 r320 (9,177) land 92%
+  P2 r210 (45,266) land 92%
+  P3 r125 (45,321) land 100%
+  P4 r70 (28,361) land 100%
+  P5 r35 (35,365) land 100%
+  endgame legs (21,312) -> (-14,284) -> (21,312)
+seed 15839: nested=true
+  P0 r430 (0,0) land 99%
+  P1 r320 (-24,22) land 99%
+  P2 r210 (36,-51) land 100%
+  P3 r125 (78,-5) land 100%
+  P4 r70 (104,-2) land 100%
+  P5 r35 (101,-25) land 100%
+  endgame legs (89,-64) -> (88,-99) -> (48,-100)
+
+lowest land coverage of any phase 3-5 field: 96%

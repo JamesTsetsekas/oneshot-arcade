@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "game": "ashfall",
+  "model": "claude-fable-5.2-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T06:45:44Z",
+  "finishedAt": "2026-11-11T08:12:11Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 64,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Babylon.js",
+    "React",
+    "Vitest",
+    "Web Audio",
+    "IndexedDB"
+  ],
+  "summary": "An isometric click-to-move action RPG slice with two full classes, a seeded wilderness and three-floor crypt, ten enemy families, two multi-phase bosses, affix loot with crafting, IndexedDB saves, Veteran difficulty and Target Hunt — all assets procedural.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 6,
+    "fidelity": 6
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Core loop is completed end to end by an autopilot in the test suite, and the production build was toured in headless Edge from a sub-path with no console errors; no human playtest, and frame rate on real GPUs is unverified. Combat in the browser tour was driven through simulation intents, not real pointer events. node scripts/screenshot.mjs needs a system Edge or Chrome.",
+  "purity": "one-shot",
+  "durationMinutes": 86
+}

@@ -1,0 +1,36 @@
+{
+  "name": "shardfront",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Shardfront - an original browser RTS vertical slice (Oneshot Arcade)",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "vite --port 5300 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 5300 --strictPort",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "bench": "vitest run -c vitest.tools.config.ts bench",
+    "screenshot": "node tools/screenshot.mjs",
+    "balance": "vitest run -c vitest.tools.config.ts balance",
+    "serve": "node tools/serve.mjs"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.187.0",
+    "playwright-core": "^1.65.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  }
+}

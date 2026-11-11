@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "game": "breachline",
+  "model": "claude-fable-5.2-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T06:45:53Z",
+  "finishedAt": "2026-11-11T08:31:35Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 57,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Babylon.js",
+    "Rapier (WASM)",
+    "React",
+    "Web Workers",
+    "Web Audio",
+    "Vitest"
+  ],
+  "summary": "Offline 6v6 Team Clash FPS against bots on an original map, run by an authoritative Web Worker room with client prediction, binary snapshots and lag compensation, plus loadouts, Momentum support actions and progression.",
+  "selfScore": {
+    "playability": 7,
+    "polish": 6,
+    "fidelity": 6
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Practice (bots) only: no online backend. Never human-playtested and audio never auditioned; verified by 57 headless tests and an automated full match on the production build served from a sub-path. Add ?demo=1 to watch an autopilot play without Pointer Lock.",
+  "purity": "one-shot",
+  "durationMinutes": 106
+}
