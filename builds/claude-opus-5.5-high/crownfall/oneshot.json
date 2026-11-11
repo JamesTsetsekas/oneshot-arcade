@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "game": "crownfall",
+  "model": "claude-opus-5.5-high",
+  "status": "complete",
+  "harnessVersion": "v1",
+  "date": "2026-11-11",
+  "startedAt": "2026-11-11T09:01:36Z",
+  "finishedAt": "2026-11-11T15:42:00Z",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "screenshot": "oneshot/screenshot.png",
+  "tests": {
+    "passed": 65,
+    "failed": 0
+  },
+  "stack": [
+    "TypeScript",
+    "Vite",
+    "Three.js (WebGL2)",
+    "React",
+    "Web Worker authoritative room",
+    "Web Audio",
+    "Vitest"
+  ],
+  "summary": "An original 3v3 two-lane MOBA vertical slice: draft six original heroes, then lane, jungle, contest Catalysts/Colossus and break Seals to destroy the Crown Engine against server-side bots, with an authoritative 30 Hz worker simulation and fog-filtered snapshots.",
+  "selfScore": {
+    "playability": 6,
+    "polish": 6,
+    "fidelity": 5
+  },
+  "readme": "README.md",
+  "report": "ONESHOT-REPORT.md",
+  "notes": "Fully offline: the 'server' is a Web Worker room in the page (same message protocol a WebSocket room would use); no human multiplayer, reconnect or real matchmaking backend. npm test takes ~100 s because it includes a full six-bot headless match. ?demo=<minutes> fast-forwards a bot-controlled match for screenshots.",
+  "purity": "one-shot",
+  "durationMinutes": 400
+}
