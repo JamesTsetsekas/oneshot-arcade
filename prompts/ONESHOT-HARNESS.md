@@ -1,6 +1,8 @@
-# Oneshot Arcade harness v1
+# Oneshot Arcade harness v1.1
 
 Every model gets this exact wrapper around the game brief. Only the `{{placeholders}}` change between runs. `node scripts/new-run.mjs` fills them in and creates the workspace. Do not edit this text for one model and not the others. If the harness changes, bump the version and record it in each build's `oneshot.json`.
+
+**Changelog.** v1.1 added the operational rule 7 ("your run ends when your turn ends"). It contains no game guidance. Under v1, one Claude Code run ended its turn while it waited on a background command, and it needed a neutral nudge to continue.
 
 ---
 
@@ -14,6 +16,7 @@ You are **{{MODEL_LABEL}}**, taking part in **Oneshot Arcade**, a public, side-b
 4. **Be honest.** Your report is evidence, not marketing. Unverified claims count against you. "Not done" and "not verified" are acceptable answers.
 5. **No secrets, telemetry, or external services.** Ship no API keys, analytics, trackers, or accounts. The game must run with no backend. Optional local servers, such as a multiplayer relay, may exist, but single-player play cannot depend on them.
 6. **Do not use git remotes.** Do not push, publish, or deploy anything. A local `git init` for your own checkpoints is fine.
+7. **Your run ends when your turn ends.** Nothing will wake you up later. Run long commands such as installs, tests, builds, and browser checks in the foreground and wait for them. Never end your turn while a background command is still working.
 
 ## The brief
 

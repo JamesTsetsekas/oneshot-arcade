@@ -10,42 +10,50 @@
     {
       "model": "claude-sonnet-5.5-high",
       "game": "shardfront",
-      "status": "queued"
+      "status": "running",
+      "started": "2026-11-11"
     },
     {
       "model": "claude-sonnet-5.5-high",
       "game": "ashfall",
-      "status": "queued"
+      "status": "running",
+      "started": "2026-11-11"
     },
     {
       "model": "claude-sonnet-5.5-high",
       "game": "breachline",
-      "status": "queued"
+      "status": "running",
+      "started": "2026-11-11"
     },
     {
       "model": "claude-sonnet-5.5-high",
       "game": "protocol",
-      "status": "queued"
+      "status": "running",
+      "started": "2026-11-11"
     },
     {
       "model": "claude-sonnet-5.5-high",
       "game": "crownfall",
-      "status": "queued"
+      "status": "running",
+      "started": "2026-11-11"
     },
     {
       "model": "claude-sonnet-5.5-high",
       "game": "skybreak",
-      "status": "queued"
+      "status": "running",
+      "started": "2026-11-11"
     },
     {
       "model": "claude-sonnet-5.5-high",
       "game": "meridian",
-      "status": "queued"
+      "status": "running",
+      "started": "2026-11-11"
     },
     {
       "model": "claude-sonnet-5.5-high",
       "game": "farestorm",
-      "status": "queued"
+      "status": "running",
+      "started": "2026-11-11"
     }
   ]
 }
